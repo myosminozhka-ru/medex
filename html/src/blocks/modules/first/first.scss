@@ -1,0 +1,96 @@
+.first {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    // background: url('/img/globus.png') 50% 100%/cover no-repeat;
+    &__in {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        box-sizing: border-box;
+        padding: vw(170) vw(120) vw(247) vw(280);
+        @media all and (max-width: 1023px) {
+            padding: 96px 15px 25px;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+    }
+    &__shield {
+        width: vw(640);
+        max-height: 100%;
+        @media all and (max-width: 1023px) {
+            order: 2;
+            flex: 1 1 auto;
+            width: 244px;
+            margin: 0 auto;
+        }
+    }
+    &__name {
+        font-weight: bold;
+        font-size: vw(100);
+        line-height: vw(133);
+        color: #FFFFFF;
+        padding-top: vw(170);
+        span {
+            color: #21DBEF;
+        }
+        @media all and (max-width: 1023px) {
+            font-size: 40px;
+            line-height: 48px;
+            padding-top: 0;
+            margin-bottom: 10px;
+        }
+    }
+    &__text {
+        width: vw(388);
+        padding-top: vw(70);
+        font-weight: 600;
+        font-size: vw(34);
+        line-height: 140%;
+        color: #FFFFFF;
+        position: relative;
+        align-self: center;
+        transition: height 0.5s ease;
+        @media all and (max-width: 1023px) {
+            width: 100%;
+            font-size: 16px;
+            padding-top: 0;            
+            box-sizing: border-box;
+            margin: 0 auto;
+            font-weight: normal;
+            margin-bottom: 20px;
+        }
+    }
+    &__text-in {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        opacity: 0;
+        transition: opacity .3s ease;
+        &.isActive {
+            opacity: 1;
+        }
+        @media all and (max-width: 1023px) {
+            padding-left: 72px;
+            padding-right: 38px;
+        }
+    }
+    .small_shield {
+        cursor: pointer;
+        path {
+            fill: #fff;
+            transition: all .3s ease;
+        }
+        &.isActive,
+        &:hover {
+            .border {
+                fill: #03C4A1;
+            }
+        }
+    }
+}

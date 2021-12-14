@@ -1,0 +1,18 @@
+extends ../../components/section/section_fast
+
+block content
+    .nine
+        .nine__in 
+            .nine__title Feedback form
+            form.nine__form
+                .nine__form-item
+                    input(type="text" placeholder="Ваше имя")
+                .nine__form-item
+                    input(type="tel" placeholder="Телефон")
+                .nine__form-item
+                    input(type="email" placeholder="Email")
+                .nine__form-button
+                    button(type="submit")
+                        span.text Отправить заявку
+                        span.icon
+                            img(src="img/svg/arrow.svg" alt="" width="100%")
