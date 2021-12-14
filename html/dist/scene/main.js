@@ -1,22 +1,22 @@
-const modelurl = "../models/border.glb";
+const modelurl = "./models/border.glb";
 
-const modelurl2 = "../models/dots.glb";
+const modelurl2 = "./models/dots.glb";
 
-const modelurl5 = "../models/shield.glb";
+const modelurl5 = "./models/shield.glb";
 
-const modelurl6 = "../models/sphere.glb";
+const modelurl6 = "./models/sphere.glb";
 
-const line4  = "../models/line4.glb";
+const line4  = "./models/line4.glb";
 
-const line5 =  "../models/line5.glb";
+const line5 =  "./models/line5.glb";
 
-const line6 =  "../models/line6.glb";
+const line6 =  "./models/line6.glb";
 
-const circule1 = "../models/circule1.glb";
+const circule1 = "./models/circule1.glb";
 
-const circule2 = "../models/circule2.glb";
+const circule2 = "./models/circule2.glb";
 
-const circule3 = "../models/circule3.glb";
+const circule3 = "./models/circule3.glb";
 
 
 
