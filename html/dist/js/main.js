@@ -325,14 +325,14 @@ __webpack_require__.r(__webpack_exports__);
 
 
 jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
-  if (window.innerWidth > 1023) {
-    var svgWidthOnFullHd = 219 * (window.innerWidth / 1920);
-    var svgHeightOnFullHd = 109 * (window.innerWidth / 1920);
-    var innerWidth = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.preloader__in').width();
-    var innerHeight = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.preloader__in').height();
-    console.log((innerWidth - svgWidthOnFullHd) / 2, svgWidthOnFullHd);
-    console.log((innerHeight - svgHeightOnFullHd) / 2, svgHeightOnFullHd);
-    setTimeout(function () {
+  var svgWidthOnFullHd = 219 * (window.innerWidth / 1920);
+  var svgHeightOnFullHd = 109 * (window.innerWidth / 1920);
+  var innerWidth = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.preloader__in').width();
+  var innerHeight = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.preloader__in').height();
+  console.log((innerWidth - svgWidthOnFullHd) / 2, svgWidthOnFullHd);
+  console.log((innerHeight - svgHeightOnFullHd) / 2, svgHeightOnFullHd);
+  setTimeout(function () {
+    if (window.innerWidth > 1023) {
       gsap__WEBPACK_IMPORTED_MODULE_1__["default"].to('.preloader__in', 1, {
         left: function left() {
           return 100 * 100 / 1920 + 'vw';
@@ -350,8 +350,10 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
           jquery__WEBPACK_IMPORTED_MODULE_0___default()('.preloader').fadeOut();
         }
       });
-    }, 2000);
-  }
+    }
+
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.preloader').fadeOut();
+  }, 2000);
 });
 
 /***/ }),
