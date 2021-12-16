@@ -22,6 +22,14 @@
     &__shield {
         width: vw(640);
         max-height: 100%;
+        @media all and (min-width: 1024px) {
+            display: none;
+            margin: 0 auto;
+            pointer-events: none;
+            &.isInteractable {
+                pointer-events: all;
+            }
+        }
         @media all and (max-width: 1023px) {
             order: 2;
             flex: 1 1 auto;
@@ -39,6 +47,12 @@
         line-height: vw(73);
         color: #FFFFFF;
         padding-top: vw(170);
+        .Typewriter__wrapper {
+            color: #FFFFFF;
+        }
+        @media all and (min-width: 1024px) {
+            display: none;
+        }
         span {
             color: #21DBEF;
         }
@@ -60,6 +74,9 @@
         position: relative;
         align-self: center;
         transition: height 0.5s ease;
+        @media all and (min-width: 1024px) {
+            display: none;
+        }
         @media all and (max-width: 1023px) {
             width: 100%;
             font-size: 16px;

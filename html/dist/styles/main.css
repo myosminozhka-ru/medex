@@ -650,6 +650,10 @@ body {
   padding-top: 8.85417vw;
 }
 
+.first__name .Typewriter__wrapper {
+  color: #FFFFFF;
+}
+
 .first__name span {
   color: #21DBEF;
 }
@@ -1074,6 +1078,24 @@ body {
 }
 
 @media all and (min-width: 1024px) {
+  .first__shield {
+    display: none;
+    margin: 0 auto;
+    pointer-events: none;
+  }
+
+  .first__shield.isInteractable {
+    pointer-events: all;
+  }
+
+  .first__name {
+    display: none;
+  }
+
+  .first__text {
+    display: none;
+  }
+
   .mobile-arrows {
     display: none;
   }

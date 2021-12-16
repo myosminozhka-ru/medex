@@ -78,7 +78,8 @@
         "phantomjs-prebuilt": "^2.1.16",
         "smart-grid": "^2.1.2",
         "three": "^0.135.0",
-        "three-addons": "^1.2.0"
+        "three-addons": "^1.2.0",
+        "typewriter-effect": "^2.18.2"
     },
     "husky": {
         "hooks": {
