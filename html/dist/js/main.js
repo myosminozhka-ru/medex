@@ -310,6 +310,52 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()('.first__shield').on('mouseenter',
 
 /***/ }),
 
+/***/ "./src/blocks/modules/preloader/preloader.js":
+/*!***************************************************!*\
+  !*** ./src/blocks/modules/preloader/preloader.js ***!
+  \***************************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
+
+
+jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
+  if (window.innerWidth > 1023) {
+    var svgWidthOnFullHd = 219 * (window.innerWidth / 1920);
+    var svgHeightOnFullHd = 109 * (window.innerWidth / 1920);
+    var innerWidth = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.preloader__in').width();
+    var innerHeight = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.preloader__in').height();
+    console.log((innerWidth - svgWidthOnFullHd) / 2, svgWidthOnFullHd);
+    console.log((innerHeight - svgHeightOnFullHd) / 2, svgHeightOnFullHd);
+    setTimeout(function () {
+      gsap__WEBPACK_IMPORTED_MODULE_1__["default"].to('.preloader__in', 1, {
+        left: function left() {
+          return 100 * 100 / 1920 + 'vw';
+        },
+        top: function top() {
+          return 60 * 100 / 1920 + 'vw';
+        },
+        x: function x() {
+          return (innerWidth - svgWidthOnFullHd) / 2 * -1 * 100 / 1920 + 'vw';
+        },
+        y: function y() {
+          return (innerHeight - svgHeightOnFullHd) / 2 * -1 * 100 / 1920 + 'vw';
+        },
+        onComplete: function onComplete() {
+          jquery__WEBPACK_IMPORTED_MODULE_0___default()('.preloader').fadeOut();
+        }
+      });
+    }, 2000);
+  }
+});
+
+/***/ }),
+
 /***/ "./src/js/import/components.js":
 /*!*************************************!*\
   !*** ./src/js/import/components.js ***!
@@ -336,9 +382,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_header_header__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! %modules%/header/header */ "./src/blocks/modules/header/header.js");
 /* harmony import */ var _modules_header_header__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_modules_header_header__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _modules_animation_animation__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! %modules%/animation/animation */ "./src/blocks/modules/animation/animation.js");
-/* harmony import */ var _modules_first_first__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! %modules%/first/first */ "./src/blocks/modules/first/first.js");
-/* harmony import */ var _modules_footer_footer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! %modules%/footer/footer */ "./src/blocks/modules/footer/footer.js");
-/* harmony import */ var _modules_footer_footer__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_modules_footer_footer__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _modules_preloader_preloader__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! %modules%/preloader/preloader */ "./src/blocks/modules/preloader/preloader.js");
+/* harmony import */ var _modules_first_first__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! %modules%/first/first */ "./src/blocks/modules/first/first.js");
+/* harmony import */ var _modules_footer_footer__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! %modules%/footer/footer */ "./src/blocks/modules/footer/footer.js");
+/* harmony import */ var _modules_footer_footer__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_modules_footer_footer__WEBPACK_IMPORTED_MODULE_4__);
+
 
 
 

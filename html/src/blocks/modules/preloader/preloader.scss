@@ -1,0 +1,21 @@
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #091029;
+    z-index: 300;
+    &__in {
+        position: absolute;
+        left: calc( 50% - #{vw(250)} );
+        top: calc( 50% - #{vw(250)} );
+        // transform: translate(-50%, -50%);
+        width: vw(500);
+        height: vw(500);
+        @media all and (max-width: 1023px) {
+            width: 300px;
+            height: 300px;
+        }
+    }
+}

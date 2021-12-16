@@ -633,7 +633,7 @@ body {
   align-items: flex-start;
   justify-content: space-between;
   box-sizing: border-box;
-  padding: 8.85417vw 6.25vw 12.86458vw 14.58333vw;
+  padding: 8.85417vw 6.25vw 12.86458vw 6.25vw;
 }
 
 .first__shield {
@@ -642,9 +642,10 @@ body {
 }
 
 .first__name {
+  width: 25.88542vw;
   font-weight: bold;
-  font-size: 5.20833vw;
-  line-height: 6.92708vw;
+  font-size: 3.125vw;
+  line-height: 3.80208vw;
   color: #FFFFFF;
   padding-top: 8.85417vw;
 }
@@ -980,6 +981,24 @@ body {
   margin-left: 1.04167vw;
 }
 
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #091029;
+  z-index: 300;
+}
+
+.preloader__in {
+  position: absolute;
+  left: calc( 50% - 13.02083vw);
+  top: calc( 50% - 13.02083vw);
+  width: 26.04167vw;
+  height: 26.04167vw;
+}
+
 .animation {
   position: fixed;
   top: 0;
@@ -1096,9 +1115,9 @@ body {
   }
 
   .first__in {
-    padding: 96px 15px 25px;
+    padding: 102px 15px 40px;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: space-between;
   }
 
   .first__shield {
@@ -1106,13 +1125,17 @@ body {
     flex: 1 1 auto;
     width: 244px;
     margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .first__name {
-    font-size: 40px;
-    line-height: 48px;
+    font-size: 30px;
+    line-height: 36px;
     padding-top: 0;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    width: 100%;
   }
 
   .first__text {
@@ -1198,6 +1221,11 @@ body {
   .nine__form-button button .icon {
     width: 31px;
     margin-left: 20px;
+  }
+
+  .preloader__in {
+    width: 300px;
+    height: 300px;
   }
 }
 /*# sourceMappingURL=maps/main.css.map */

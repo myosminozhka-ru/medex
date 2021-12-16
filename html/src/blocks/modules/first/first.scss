@@ -12,11 +12,11 @@
         align-items: flex-start;
         justify-content: space-between;
         box-sizing: border-box;
-        padding: vw(170) vw(120) vw(247) vw(280);
+        padding: vw(170) vw(120) vw(247) vw(120);
         @media all and (max-width: 1023px) {
-            padding: 96px 15px 25px;
+            padding: 102px 15px 40px;
             flex-direction: column;
-            justify-content: flex-start;
+            justify-content: space-between;
         }
     }
     &__shield {
@@ -27,22 +27,27 @@
             flex: 1 1 auto;
             width: 244px;
             margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
     }
     &__name {
+        width: vw(497);
         font-weight: bold;
-        font-size: vw(100);
-        line-height: vw(133);
+        font-size: vw(60);
+        line-height: vw(73);
         color: #FFFFFF;
         padding-top: vw(170);
         span {
             color: #21DBEF;
         }
         @media all and (max-width: 1023px) {
-            font-size: 40px;
-            line-height: 48px;
+            font-size: 30px;
+            line-height: 36px;
             padding-top: 0;
-            margin-bottom: 10px;
+            margin-bottom: 20px;
+            width: 100%;
         }
     }
     &__text {
