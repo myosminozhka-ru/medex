@@ -60,7 +60,7 @@ $(function() {
         }
     }
     function showShield() {
-        $('.first__shield').fadeIn('slow', function() {
+        $('.first__shield').fadeIn('fast', function() {
 
             $('.first__shield').html($(`<svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 641 775" fill="none">
                 
@@ -69,33 +69,16 @@ $(function() {
                         attributeName="transform"
                         type="scale"
                         values="0.71; 1"
-                        dur="1s"
+                        dur="2s"
                         repeatCount="indefinite"
-                        begin="10.5s"
+                        begin="12.5s"
                     />
                     <animate
                         attributeName="stroke-opacity"
                         values="0; 0.3; 0"
-                        dur="1s"
+                        dur="2s"
                         repeatCount="indefinite"
-                        begin="10.5s"
-                    />
-                </path>
-                <path d="M1.5 545.185V120.557C1.5 103.32 12.9572 88.1831 29.5469 83.5031L309.568 4.50743C316.403 2.57913 323.639 2.57914 330.474 4.50743L610.495 83.5031C627.084 88.1831 638.542 103.32 638.542 120.557V244.459V545.185C638.542 558.214 631.953 570.358 621.031 577.461L341.01 759.561C328.248 767.861 311.794 767.861 299.032 759.561L19.0109 577.461C8.08895 570.358 1.5 558.214 1.5 545.185Z" stroke="white" stroke-opacity="0" stroke-width="3" transform="scale(0.71)" style="transform-box: fill-box; transform-origin: 50% 50%;">
-                    <animateTransform
-                        attributeName="transform"
-                        type="scale"
-                        values="0.71; 1"
-                        dur="1s"
-                        repeatCount="indefinite"
-                        begin="8.5s"
-                    />
-                    <animate
-                        attributeName="stroke-opacity"
-                        values="0; 0.3; 0"
-                        dur="1s"
-                        repeatCount="indefinite"
-                        begin="8.5s"
+                        begin="12.5s"
                     />
                 </path>
                 <path d="M45.1392 520.476V161.479C45.1392 144.237 56.6037 129.097 73.2005 124.422L309.582 57.8357C316.408 55.9128 323.633 55.9128 330.46 57.8357L566.841 124.422C583.438 129.097 594.903 144.237 594.903 161.479V264.148V520.476C594.903 533.514 588.304 545.666 577.37 552.766L340.988 706.26C328.236 714.54 311.806 714.54 299.054 706.26L62.672 552.766C51.7375 545.666 45.1392 533.514 45.1392 520.476Z" stroke="white" stroke-opacity="0" stroke-width="3" transform="scale(0.83)" style="transform-box: fill-box; transform-origin: 50% 50%;">
@@ -103,14 +86,14 @@ $(function() {
                         attributeName="transform"
                         type="scale"
                         values="0.83; 1"
-                        dur="1s"
+                        dur="2s"
                         repeatCount="indefinite"
                         begin="12.5s"
                     />
                     <animate
                         attributeName="stroke-opacity"
                         values="0; 0.3; 0"
-                        dur="1s"
+                        dur="2s"
                         repeatCount="indefinite"
                         begin="12.5s"
                     />
