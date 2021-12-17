@@ -12,7 +12,7 @@
     // }
     &.active {
         opacity: 1;
-        transition: .3s opacity 4s ease;
+        transition: .3s opacity 3s ease;
     }
     &.fast_show {
         transition: .3s opacity .3s ease !important;

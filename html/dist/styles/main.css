@@ -552,7 +552,7 @@ body {
 
 .section.active {
   opacity: 1;
-  transition: .3s opacity 4s ease;
+  transition: .3s opacity 3s ease;
 }
 
 .section.fast_show {
