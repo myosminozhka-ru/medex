@@ -85,17 +85,17 @@ $(function() {
                     <animateTransform
                         attributeName="transform"
                         type="scale"
-                        values="0.83; 1"
+                        values="0.83; 1.1"
                         dur="2s"
                         repeatCount="indefinite"
-                        begin="12.5s"
+                        begin="13.5s"
                     />
                     <animate
                         attributeName="stroke-opacity"
                         values="0; 0.3; 0"
                         dur="2s"
                         repeatCount="indefinite"
-                        begin="12.5s"
+                        begin="13.5s"
                     />
                 </path>
                 <path d="M92.8191 493.926V205.481C92.8191 188.242 104.279 173.104 120.871 168.426L309.573 115.219C316.405 113.292 323.637 113.292 330.469 115.219L519.171 168.426C535.763 173.104 547.223 188.242 547.223 205.481V285.328V493.926C547.223 506.957 540.631 519.104 529.704 526.206L341.002 648.859C328.244 657.152 311.798 657.152 299.039 648.859L110.337 526.206C99.4112 519.104 92.8191 506.957 92.8191 493.926Z" stroke="white" stroke-opacity="0.3" stroke-width="3" stroke-dasharray="2100 2100" stroke-dashoffset="2100">
