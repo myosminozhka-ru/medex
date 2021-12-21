@@ -7,16 +7,25 @@ import Typewriter from 'typewriter-effect/dist/core';
 const third_shield = new Typewriter('.third__shield-in', {
     strings: ['Mosoblkino "has been organizing film distribution.'],
     autoStart: false,
+    delay: 30
 });
 
 const fiveth_shield = new Typewriter('.fiveth__shield-in', {
     strings: ['Mosoblkino "has been organizing film distribution.'],
     autoStart: false,
+    delay: 30
 });
 
 const seventh_shield = new Typewriter('.seventh__shield-in', {
     strings: ['Mosoblkino "has been organizing film distribution.'],
     autoStart: false,
+    delay: 30
+});
+
+const nineth_title = new Typewriter('.nine__title', {
+    strings: ['Feedback form'],
+    autoStart: false,
+    delay: 30
 });
 
 
@@ -89,6 +98,9 @@ const scroller = new fullpage('#sections', {
             case "nine":
                 step = 9;
                 step9();
+                setTimeout(() => {
+                    animateTyping(nineth_title, $('.nine__title').data('text'), '.nine__title .Typewriter__wrapper');
+                }, 2000);
                 break;
             default:
                 step = 1;
