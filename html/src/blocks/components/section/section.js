@@ -49,6 +49,7 @@ const scroller = new fullpage('#sections', {
     onLeave: (origin, destination) => {
         if (!$('.animation__in').length) return;
         $('.counter__current').text(destination.index + 1)
+        
         switch (destination.anchor)
         {
             case "first":
@@ -106,6 +107,18 @@ const scroller = new fullpage('#sections', {
                 step = 1;
                 step1();
          }
+         console.log(destination.anchor);
+        if (destination.anchor == 'first') {
+            $('.mobile-arrows__item.mobile-arrows__item--up').fadeOut();
+        } else {
+            $('.mobile-arrows__item.mobile-arrows__item--up').fadeIn();
+        }
+
+        if (destination.anchor === 'nine') {
+            $('.mobile-arrows__item.mobile-arrows__item--down').fadeOut();
+        } else {
+            $('.mobile-arrows__item.mobile-arrows__item--down').fadeIn();
+        }
     },
     afterLoad: () => {
         // video.play();

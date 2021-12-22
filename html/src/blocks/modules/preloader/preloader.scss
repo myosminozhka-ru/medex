@@ -16,6 +16,8 @@
         @media all and (max-width: 1023px) {
             width: 300px;
             height: 300px;
+            left: calc(50% - 150px);
+            top: calc(50% - 150px);
         }
     }
 }

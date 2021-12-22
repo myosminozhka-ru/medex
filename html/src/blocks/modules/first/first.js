@@ -1,8 +1,8 @@
 import $ from 'jquery';
-if (window.innerWidth <= 1023) {
-    $(`.first__text`).innerHeight($('[data-item-id].isActive').innerHeight());
+// if (window.innerWidth <= 1023) {
+//     $(`.first__text`).innerHeight($('[data-item-id].isActive').innerHeight());
 
-}
+// }
 $('.first__shield').on('mouseenter', '.small_shield', function() {
     $('[data-text-id].isActive').removeClass('isActive');
     $('[data-item-id].isActive').removeClass('isActive');

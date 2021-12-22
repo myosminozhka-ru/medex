@@ -30,9 +30,7 @@
         left: 0;
         right: 0;
         height: 23px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        text-align: center;
         font-size: 0;
         svg path {
             stroke: #fff;
@@ -40,6 +38,7 @@
         }
         &--up {
             top: 80px;
+            display: none;
         }
         &--down {
             bottom: 40px;

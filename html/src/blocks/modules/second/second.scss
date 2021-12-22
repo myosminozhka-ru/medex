@@ -8,17 +8,36 @@
     &__in {
         width: 100%;
         height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        padding: vw(170) vw(120) vw(247) vw(120);
+        box-sizing: border-box;
+        @media all and (max-width: 1023px) {
+            padding: 102px 15px 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
     }
-    &__name {
-        font-weight: bold;
-        font-size: vw(100);
-        line-height: vw(133);
+    &__text {
+        width: vw(497);
+        font-weight: 400;
+        font-size: vw(46);
+        line-height: vw(64);
         color: #FFFFFF;
+        padding-top: vw(170);
+        .Typewriter__wrapper {
+            color: #FFFFFF;
+        }
         span {
             color: #21DBEF;
+        }
+        @media all and (max-width: 1023px) {
+            font-size: 30px;
+            line-height: 36px;
+            padding-top: 0;
+            margin-bottom: 20px;
+            width: 100%;
         }
     }
 }
