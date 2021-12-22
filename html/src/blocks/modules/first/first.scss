@@ -39,6 +39,9 @@
             justify-content: center;
             align-items: flex-end;
         }
+        @media all and (max-width: 400px) {
+            width: 320px;
+        }
     }
     &__name {
         width: vw(497);
@@ -91,6 +94,9 @@
             bottom: 130px;
             height: 210px;
         }
+        @media all and (max-width: 400px) {
+            bottom: 75px;
+        }
     }
     &__text-in {
         position: absolute;
@@ -107,6 +113,9 @@
             height: 210px;
             margin: 0 auto;
             text-align: center;
+        }
+        @media all and (max-width: 400px) {
+            width: 180px;
         }
     }
     .small_shield {
