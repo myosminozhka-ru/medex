@@ -1611,4 +1611,10 @@ body {
     width: 180px;
   }
 }
+
+@media all and (max-width: 330px) {
+  .first__shield {
+    transform: translateX(-15px);
+  }
+}
 /*# sourceMappingURL=maps/main.css.map */

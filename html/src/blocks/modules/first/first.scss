@@ -42,6 +42,10 @@
         @media all and (max-width: 400px) {
             width: 320px;
         }
+        @media all and (max-width: 330px) {
+            // width: 320px;
+            transform: translateX(-15px);
+        }
     }
     &__name {
         width: vw(497);
