@@ -115,6 +115,10 @@
             align-items: center;
             justify-content: center;
             cursor: pointer;
+            transition: background .3s ease-in-out;
+            &:hover {
+                background: #0ce5ec;
+            }
             @media all and (max-width: 1023px) {
                 border-radius: 5px;
                 padding: 20px 35px;

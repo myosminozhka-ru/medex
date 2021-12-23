@@ -15,6 +15,10 @@ body {
     padding: vw(12) vw(30);
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #03C4A1;
     border-radius: vw(5);
+    transition: background .3s ease-in-out;
+    &:hover {
+        background: #0ce5ec;
+    }
     @media all and (max-width: 1023px) {
         border-radius: 5px;
         padding: 10px 15px;
