@@ -1457,6 +1457,7 @@ body {
     right: 0;
     bottom: 130px;
     height: 210px;
+    pointer-events: none;
   }
 
   .first__text-in {

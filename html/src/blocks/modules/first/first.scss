@@ -106,6 +106,7 @@
             right: 0;
             bottom: 130px;
             height: 210px;
+            pointer-events: none;
         }
         @media all and (max-width: 400px) {
             bottom: 75px;
