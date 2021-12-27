@@ -28,6 +28,12 @@ const nineth_title = new Typewriter('.nine__title', {
     delay: 30
 });
 
+const second_title = new Typewriter('.second__text', {
+    strings: ['Our commitments'],
+    autoStart: false,
+    delay: 30
+});
+
 
 
 function animateTyping(writer, text, selector) {
@@ -67,6 +73,9 @@ const scroller = new fullpage('#sections', {
                 } else {
                     step2Mobile();
                 }
+                setTimeout(() => {
+                    animateTyping(second_title, $('.second__text').data('text'), '.second__text .Typewriter__wrapper');
+                }, 2000);
                 break;
             case "third":
                 step = 3;

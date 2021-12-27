@@ -517,7 +517,7 @@ ul {
 
 body {
   font-family: Gilroy, sans-serif;
-  background: #091029;
+  background: #000;
 }
 
 .button {
@@ -653,7 +653,7 @@ body {
 .first__name {
   width: 25.88542vw;
   font-weight: 400;
-  font-size: 2.08333vw;
+  font-size: 1.66667vw;
   line-height: 2.60417vw;
   color: #FFFFFF;
   padding-top: 5.20833vw;
@@ -671,7 +671,7 @@ body {
   width: 20.20833vw;
   padding-top: 3.64583vw;
   font-weight: 400;
-  font-size: 1.77083vw;
+  font-size: 1.19792vw;
   line-height: 140%;
   color: #FFFFFF;
   position: relative;
@@ -717,24 +717,16 @@ body {
 .second__in {
   width: 100%;
   height: 100%;
-  padding: 8.85417vw 6.25vw 12.86458vw 6.25vw;
+  padding: 14.0625vw 6.25vw 12.86458vw 6.25vw;
   box-sizing: border-box;
 }
 
 .second__text {
-  width: 36.45833vw;
-  font-size: 2.08333vw;
-  line-height: 2.60417vw;
+  font-weight: bold;
+  font-size: 3.33333vw;
+  line-height: 4.01042vw;
+  margin-bottom: 2.08333vw;
   color: #FFFFFF;
-  padding-top: 5.20833vw;
-}
-
-.second__text .Typewriter__wrapper {
-  color: #FFFFFF;
-}
-
-.second__text span {
-  color: #21DBEF;
 }
 
 .third {
@@ -787,7 +779,7 @@ body {
 
 .fourth__text {
   width: 36.45833vw;
-  font-size: 2.08333vw;
+  font-size: 1.66667vw;
   line-height: 2.60417vw;
   color: #FFFFFF;
   padding-top: 5.20833vw;
@@ -852,7 +844,7 @@ body {
 
 .sixth__text {
   width: 36.45833vw;
-  font-size: 2.08333vw;
+  font-size: 1.66667vw;
   line-height: 2.60417vw;
   color: #FFFFFF;
   padding-top: 5.20833vw;
@@ -916,7 +908,7 @@ body {
 
 .eight__text {
   width: 36.45833vw;
-  font-size: 2.08333vw;
+  font-size: 1.66667vw;
   line-height: 2.60417vw;
   color: #FFFFFF;
   padding-top: 5.20833vw;
@@ -1275,7 +1267,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: #091029;
+  background: #000;
   z-index: 300;
 }
 
@@ -1477,12 +1469,9 @@ body {
   }
 
   .second__text {
-    font-size: 20px;
-    line-height: 1.2;
-    padding-top: 0;
-    margin-bottom: 20px;
-    width: 100%;
-    text-align: center;
+    font-size: 40px;
+    line-height: 48px;
+    margin-bottom: 25px;
   }
 
   .third__shield {
@@ -1634,11 +1623,6 @@ body {
     font-size: 15px;
   }
 
-  .second__text {
-    margin-bottom: 0;
-    font-size: 15px;
-  }
-
   .fourth__text {
     margin-bottom: 0;
     font-size: 15px;
@@ -1657,12 +1641,6 @@ body {
 
 @media all and (max-width: 400px) and (max-height: 600px) {
   .first__name {
-    margin-bottom: 0;
-    font-size: 15px;
-    text-align: center;
-  }
-
-  .second__text {
     margin-bottom: 0;
     font-size: 15px;
     text-align: center;

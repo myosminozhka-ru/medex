@@ -58,7 +58,7 @@ let renderer = new THREE.WebGLRenderer( { antialias: true } );
 renderer.setPixelRatio(2.2);
 renderer.setSize( window.innerWidth, window.innerHeight );
 renderer.toneMapping = THREE.ReinhardToneMapping;
-renderer.toneMappingExposure = Math.pow( 1.1, 1.3 );
+renderer.toneMappingExposure = Math.pow( 1.2, 4.0 );
 
 
 
