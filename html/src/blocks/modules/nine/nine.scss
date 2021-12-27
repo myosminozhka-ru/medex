@@ -1,18 +1,18 @@
 @mixin counDelay($counter: 10) {
     @for $item from 0 through $counter {
-        .section.active .nine__form > div:nth-child(#{$item}) {
+        .section.active .nine__form > div:nth-of-type(#{$item}) {
             transition: .6s all #{($item + 2) * 1.1}s ease;
         }
-        .section.active .nine__form > div:nth-child(#{$item}):after {
+        .section.active .nine__form > div:nth-of-type(#{$item}):after {
             transition: .6s all #{($item + 2) * 1.1}s ease;
         }
-        .section.active .nine__form > div:nth-child(#{$item}) input {
+        .section.active .nine__form > div:nth-of-type(#{$item}) input {
             transition: .6s all #{($item + 2) * 1.1}s ease;
         }
-        .section.active .nine__form > div:nth-child(#{$item}) input::placeholder {
+        .section.active .nine__form > div:nth-of-type(#{$item}) input::placeholder {
             transition: .6s all #{($item + 2) * 1.1}s ease;
         }
-        .section.active .nine__form > div:nth-child(#{$item}) input::-webkit-placeholder {
+        .section.active .nine__form > div:nth-of-type(#{$item}) input::-webkit-placeholder {
             transition: .6s all #{($item + 2) * 1.1}s ease;
         }
     }
