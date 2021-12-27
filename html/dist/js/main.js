@@ -455,7 +455,7 @@ window.typewriter = new typewriter_effect_dist_core__WEBPACK_IMPORTED_MODULE_2__
 jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
   function moveItem(item) {
     gsap__WEBPACK_IMPORTED_MODULE_1__["default"].to(item, 0.3, {
-      transform: "translate(0, 0)",
+      transform: "scale(1) translate(0, 0)",
       fillOpacity: 1,
       onComplete: function onComplete() {
         console.log(jquery__WEBPACK_IMPORTED_MODULE_0___default()(item).next().length);

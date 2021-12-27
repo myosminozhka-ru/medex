@@ -13,7 +13,7 @@ window.typewriter = new Typewriter('.first__name', {
 $(function() {
     function moveItem(item) {
         gsap.to(item, 0.3, {
-            transform: `translate(0, 0)`,
+            transform: `scale(1) translate(0, 0)`,
             fillOpacity: 1,
             onComplete: () => {
                 console.log($(item).next().length);
