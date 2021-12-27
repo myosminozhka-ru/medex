@@ -179,8 +179,8 @@
       <section class="section">
         <div class="third">
           <div class="third__in">
-            <div class="third__shield" data-text="ensure clients comfortable business and save their time on orders">
-              <div class="third__shield-in">ensure clients comfortable business and save their time on orders</div>
+            <div class="third__shield" data-text="Ensure clients comfortable business and save their time on orders">
+              <div class="third__shield-in">Ensure clients comfortable business and save their time on orders</div>
             </div>
           </div>
         </div>
@@ -195,8 +195,8 @@
       <section class="section">
         <div class="fiveth">
           <div class="fiveth__in">
-            <div class="fiveth__shield" data-text="bring clients more profit from each shipped order">
-              <div class="fiveth__shield-in">bring clients more profit from each shipped order</div>
+            <div class="fiveth__shield" data-text="Bring clients more profit from each shipped order">
+              <div class="fiveth__shield-in">Bring clients more profit from each shipped order</div>
             </div>
           </div>
         </div>
@@ -211,8 +211,8 @@
       <section class="section">
         <div class="seventh">
           <div class="seventh__in">
-            <div class="seventh__shield" data-text="give clients access to the best shipping options and top products on the market">
-              <div class="seventh__shield-in">give clients access to the best shipping options and top products on the market</div>
+            <div class="seventh__shield" data-text="Give clients access to the best shipping options and top products on the market">
+              <div class="seventh__shield-in">Give clients access to the best shipping options and top products on the market</div>
             </div>
           </div>
         </div>
@@ -247,43 +247,25 @@
       </section>
       <script id="vertexShader" type="x-shader/x-vertex">
         varying vec3 vNormal;
-        
         varying vec3 vPositionNormal;
-        
         void main() 
-        
         {
-        
-        vNormal = normalize( normalMatrix * normal ); 
-        
+        vNormal = normalize( normalMatrix * normal ); // 转换到视图空间
         vPositionNormal = normalize(( modelViewMatrix * vec4(position, 1.0) ).xyz);
-        
         gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );
-        
         }
-        
       </script>
       <script id="fragmentShader" type="x-shader/x-vertex">
         uniform vec3 glowColor;
-        
         uniform float b;
-        
         uniform float p;
-        
         uniform float s;
-        
         varying vec3 vNormal;
-        
         varying vec3 vPositionNormal;
-        
         void main() 
-        
         {
-        
         float a = pow( b + s * abs(dot(vNormal, vPositionNormal)), p );
-        
         gl_FragColor = vec4( glowColor, a );
-        
         }
       </script>
       <script type="module" src="scene/main.js"></script>

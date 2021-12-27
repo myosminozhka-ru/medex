@@ -217,17 +217,35 @@ var scroller = new fullpage_js__WEBPACK_IMPORTED_MODULE_1___default.a('#sections
     switch (destination.anchor) {
       case "first":
         step = 1;
-        step1();
+
+        if (!isMobile) {
+          step1();
+        } else {
+          step1Mobile();
+        }
+
         break;
 
       case "second":
         step = 2;
-        step2();
+
+        if (!isMobile) {
+          step2();
+        } else {
+          step2Mobile();
+        }
+
         break;
 
       case "third":
         step = 3;
-        step3();
+
+        if (!isMobile) {
+          step3();
+        } else {
+          step3Mobile();
+        }
+
         setTimeout(function () {
           animateTyping(third_shield, jquery__WEBPACK_IMPORTED_MODULE_0___default()('.third__shield').data('text'), '.third__shield-in .Typewriter__wrapper');
         }, 3000); // third_shield
@@ -238,12 +256,24 @@ var scroller = new fullpage_js__WEBPACK_IMPORTED_MODULE_1___default.a('#sections
 
       case "fourth":
         step = 4;
-        step4();
+
+        if (!isMobile) {
+          step4();
+        } else {
+          step6Mobile();
+        }
+
         break;
 
       case "fiveth":
         step = 5;
-        step5();
+
+        if (!isMobile) {
+          step5();
+        } else {
+          step4Mobile();
+        }
+
         setTimeout(function () {
           animateTyping(fiveth_shield, jquery__WEBPACK_IMPORTED_MODULE_0___default()('.fiveth__shield').data('text'), '.fiveth__shield-in .Typewriter__wrapper');
         }, 3000);
@@ -251,12 +281,24 @@ var scroller = new fullpage_js__WEBPACK_IMPORTED_MODULE_1___default.a('#sections
 
       case "sixth":
         step = 6;
-        step6();
+
+        if (!isMobile) {
+          step6();
+        } else {
+          step6Mobile();
+        }
+
         break;
 
       case "seventh":
         step = 7;
-        step7();
+
+        if (!isMobile) {
+          step7();
+        } else {
+          step5Mobile();
+        }
+
         setTimeout(function () {
           animateTyping(seventh_shield, jquery__WEBPACK_IMPORTED_MODULE_0___default()('.seventh__shield').data('text'), '.seventh__shield-in .Typewriter__wrapper');
         }, 3000);
@@ -264,12 +306,24 @@ var scroller = new fullpage_js__WEBPACK_IMPORTED_MODULE_1___default.a('#sections
 
       case "eight":
         step = 8;
-        step8();
+
+        if (!isMobile) {
+          step8();
+        } else {
+          step6Mobile();
+        }
+
         break;
 
       case "nine":
         step = 9;
-        step9();
+
+        if (!isMobile) {
+          step9();
+        } else {
+          step6Mobile();
+        }
+
         setTimeout(function () {
           animateTyping(nineth_title, jquery__WEBPACK_IMPORTED_MODULE_0___default()('.nine__title').data('text'), '.nine__title .Typewriter__wrapper');
         }, 2000);
