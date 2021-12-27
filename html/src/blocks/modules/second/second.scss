@@ -20,12 +20,11 @@
         }
     }
     &__text {
-        width: vw(497);
-        font-weight: 400;
-        font-size: vw(46);
-        line-height: vw(64);
+        width: vw(700);
+        font-size: vw(40);
+        line-height: vw(50);
         color: #FFFFFF;
-        padding-top: vw(170);
+        padding-top: vw(100);
         .Typewriter__wrapper {
             color: #FFFFFF;
         }
@@ -33,11 +32,21 @@
             color: #21DBEF;
         }
         @media all and (max-width: 1023px) {
-            font-size: 30px;
-            line-height: 36px;
+            font-size: 20px;
+            line-height: 1.2;
             padding-top: 0;
             margin-bottom: 20px;
             width: 100%;
+            text-align: center;
+        }
+        @media all and (max-width: 400px) and (max-height: 700px) {
+            margin-bottom: 0;
+            font-size: 15px;
+        }
+        @media all and (max-width: 400px) and (max-height: 600px) {
+            margin-bottom: 0;
+            font-size: 15px;
+            text-align: center;
         }
     }
 }
