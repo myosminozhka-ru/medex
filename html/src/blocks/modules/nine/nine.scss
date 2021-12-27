@@ -67,7 +67,7 @@
             box-shadow: 0px 0px 5px 0px white;
             transition: all .3s ease;
         }
-        input {
+        input:not([type="hidden"]) {
             display: block;
             width: 100%;
             box-sizing: border-box;

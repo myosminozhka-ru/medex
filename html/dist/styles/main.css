@@ -975,7 +975,7 @@ body {
   transition: all .3s ease;
 }
 
-.nine__form-item input {
+.nine__form-item input:not([type="hidden"]) {
   display: block;
   width: 100%;
   box-sizing: border-box;
@@ -987,9 +987,9 @@ body {
   outline: none;
 }
 
-.nine__form-item input,
-.nine__form-item input::placeholder,
-.nine__form-item input::-webkit-placeholder {
+.nine__form-item input:not([type="hidden"]),
+.nine__form-item input:not([type="hidden"])::placeholder,
+.nine__form-item input:not([type="hidden"])::-webkit-placeholder {
   font-size: 1.25vw;
   line-height: 1;
   color: transparent;
@@ -1574,14 +1574,14 @@ body {
     margin-top: 10px;
   }
 
-  .nine__form-item input {
+  .nine__form-item input:not([type="hidden"]) {
     height: 44px;
     background: transparent url("../img/svg/arrow.svg") -31px 50%/31px no-repeat;
   }
 
-  .nine__form-item input,
-  .nine__form-item input::placeholder,
-  .nine__form-item input::-webkit-placeholder {
+  .nine__form-item input:not([type="hidden"]),
+  .nine__form-item input:not([type="hidden"])::placeholder,
+  .nine__form-item input:not([type="hidden"])::-webkit-placeholder {
     font-size: 16px;
   }
 
