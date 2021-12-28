@@ -1,6 +1,6 @@
 const modelurl = "./models/border.glb";
 const modelurl2 = "./models/dots.glb";
-const modelurl5 = "./models/shield.glb";
+const modelurl5 = "./models/shield (2).glb";
 const modelurl6 = "./models/sphere.glb";
 const line4  = "./models/line4.glb";
 const line5 =  "./models/line5.glb";
@@ -106,7 +106,7 @@ composer.addPass( bloomPass );
 
 
 let material = new THREE.MeshStandardMaterial( {color: 0x00b3ff, side: THREE.DoubleSide} );
-// scene.background = new THREE.Color(0.009496, 0.014244, 0.037984, 1)
+scene.background = new THREE.Color(0.009496, 0.014244, 0.037984, 1)
 
 
 var customMaterial = new THREE.ShaderMaterial({

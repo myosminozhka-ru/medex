@@ -1,6 +1,6 @@
 const modelurl = "./models/border.glb";
 const modelurl2 = "./models/dots.glb";
-const modelurl5 = "./models/shield.glb";
+const modelurl5 = "./models/shield (2).glb";
 const modelurl6 = "./models/sphere.glb";
 const line4  = "./models/line4.glb";
 const line5 =  "./models/line5.glb";
