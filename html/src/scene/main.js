@@ -106,7 +106,7 @@ composer.addPass( bloomPass );
 
 
 let material = new THREE.MeshStandardMaterial( {color: 0x00b3ff, side: THREE.DoubleSide} );
-scene.background = new THREE.Color(0.009496, 0.014244, 0.037984, 1)
+// scene.background = new THREE.Color(0.009496, 0.014244, 0.037984, 1)
 
 
 var customMaterial = new THREE.ShaderMaterial({
