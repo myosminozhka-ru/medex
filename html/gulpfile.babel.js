@@ -63,7 +63,12 @@ const requireDir = require("require-dir"),
         },
         scene: {
             src: "./src/scene/*",
-            dist: "./dist/scene/"
+            dist: "./dist/scene/",
+            watch: "./src/scene/*.js"
+        },
+        textures: {
+            src: "./src/textures/*",
+            dist: "./dist/textures/"
         }
     };
 
@@ -72,10 +77,10 @@ requireDir("./gulp-tasks/");
 export { paths };
 
 export const development = gulp.series("clean", "smart-grid",
-    gulp.parallel(["views", "styles", "scripts", "scene", "models", "images", "webp", "sprites", "fonts", "favicons"]),
+    gulp.parallel(["views", "styles", "scripts", "scene", "textures", "models", "images", "webp", "sprites", "fonts", "favicons"]),
     gulp.parallel("serve"));
 
 export const prod = gulp.series("clean",
-    gulp.parallel(["views", "styles", "scripts", "scene", "models", "images", "webp", "sprites", "fonts", "favicons", "gzip"]));
+    gulp.parallel(["views", "styles", "scripts", "scene", "textures", "models", "images", "webp", "sprites", "fonts", "favicons", "gzip"]));
 
 export default development;
