@@ -21,9 +21,9 @@ const modelurl = "./models/border.glb";
     }
 
     window.isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-    if(isMobile){
-      document.getElementById('scroll').style.display = 'none';
-    }
+    // if(isMobile){
+    //   document.getElementById('scroll').style.display = 'none';
+    // }
 
     let shield1StartPosition = null;
     let shield2StartPosition = null;
