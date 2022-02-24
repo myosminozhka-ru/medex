@@ -2,7 +2,7 @@ import $ from 'jquery';
 import fullpage from 'fullpage.js';
 import Typewriter from 'typewriter-effect/dist/core';
 
-
+$(function() {
 
 const third_shield = new Typewriter('.third__shield-in', {
     strings: ['Mosoblkino "has been organizing film distribution.'],
@@ -59,31 +59,32 @@ const scroller = new fullpage('#sections', {
         switch (destination.anchor)
         {
             case "first":
-                step = 1;
-                if (!isMobile) {
-                    step1();
-                } else {
-                    step1Mobile();
-                }
+                window.step = 1;
+                window.step1();
+                // if (!isMobile) {
+                //     step1();
+                // } else {
+                //     step1Mobile();
+                // }
                 break;
             case "second":
-                step = 2;
-                if (!isMobile) {
-                    step2();
-                } else {
-                    step2Mobile();
-                }
+                window.step = 2;
+                window.step2();
+                // if (!isMobile) {
+                // } else {
+                //     step2Mobile();
+                // }
                 setTimeout(() => {
                     animateTyping(second_title, $('.second__text').data('text'), '.second__text .Typewriter__wrapper');
                 }, 2000);
                 break;
             case "third":
-                step = 3;
-                if (!isMobile) {
-                    step3();
-                } else {
-                    step3Mobile();
-                }
+                window.step = 3;
+                window.step3();
+                // if (!isMobile) {
+                // } else {
+                //     step3Mobile();
+                // }
                 setTimeout(() => {
                     animateTyping(third_shield, $('.third__shield').data('text'), '.third__shield-in .Typewriter__wrapper');
                 }, 3000);
@@ -92,65 +93,65 @@ const scroller = new fullpage('#sections', {
                 //     .start();
                 break;
             case "fourth":
-                step = 4;
-                if (!isMobile) {
-                    step4();
-                } else {
-                    step6Mobile();
-                }
+                window.step = 4;
+                window.step4();
+                // if (!isMobile) {
+                // } else {
+                //     step6Mobile();
+                // }
                 break;
             case "fiveth":
-                step = 5;
-                if (!isMobile) {
-                    step5();
-                } else {
-                    step4Mobile();
-                }
+                window.step = 5;
+                window.step5();
+                // if (!isMobile) {
+                // } else {
+                //     step4Mobile();
+                // }
                 setTimeout(() => {
                     animateTyping(fiveth_shield, $('.fiveth__shield').data('text'), '.fiveth__shield-in .Typewriter__wrapper');
                 }, 3000);
                 break;
             case "sixth":
-                step = 6;
-                if (!isMobile) {
-                    step6();
-                } else {
-                    step6Mobile();
-                }
+                window.step = 6;
+                window.step6();
+                // if (!isMobile) {
+                // } else {
+                //     step6Mobile();
+                // }
                 break;
             case "seventh":
-                step = 7;
-                if (!isMobile) {
-                    step7();
-                } else {
-                    step5Mobile();
-                }
+                window.step = 7;
+                window.step7();
+                // if (!isMobile) {
+                // } else {
+                //     step5Mobile();
+                // }
                 setTimeout(() => {
                     animateTyping(seventh_shield, $('.seventh__shield').data('text'), '.seventh__shield-in .Typewriter__wrapper');
                 }, 3000);
                 break;
             case "eight":
-                step = 8;
-                if (!isMobile) {
-                    step8();
-                } else {
-                    step6Mobile();
-                }
+                window.step = 8;
+                window.step8();
+                // if (!isMobile) {
+                // } else {
+                //     step6Mobile();
+                // }
                 break;
             case "nine":
-                step = 9;
-                if (!isMobile) {
-                    step9();
-                } else {
-                    step6Mobile();
-                }
+                window.step = 9;
+                window.step9();
+                // if (!isMobile) {
+                // } else {
+                //     step6Mobile();
+                // }
                 setTimeout(() => {
                     animateTyping(nineth_title, $('.nine__title').data('text'), '.nine__title .Typewriter__wrapper');
                 }, 2000);
                 break;
             default:
-                step = 1;
-                step1();
+                window.step = 1;
+                window.step1();
          }
          console.log(destination.anchor);
         if (destination.anchor == 'first') {
@@ -169,3 +170,4 @@ const scroller = new fullpage('#sections', {
         // video.play();
     }
 });
+})
