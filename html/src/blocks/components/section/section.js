@@ -41,6 +41,7 @@ function animateTyping(writer, text, selector) {
     writer.typeString(text).start();
 }
 
+
 // const video = $('.animation video').get(0);
 // console.log(video);
 const scroller = new fullpage('#sections', {
@@ -50,7 +51,11 @@ const scroller = new fullpage('#sections', {
     // autoScrolling: false,
     controlArrows: true,
     afterRender: ( section, origin, destination, direction) => {
-		$('.counter__current').text(section.index + 1)
+		$('.counter__current').text(section.index + 1);
+        console.log('window.step', window.step);
+        if ( window.step == 1) {
+            window.mobileStep1();
+        }
 	},
     onLeave: (origin, destination) => {
         if (!$('.animation__in').length) return;
@@ -60,31 +65,30 @@ const scroller = new fullpage('#sections', {
         {
             case "first":
                 window.step = 1;
-                window.step1();
-                // if (!isMobile) {
-                //     step1();
-                // } else {
-                //     step1Mobile();
-                // }
+                if (!isMobile) {
+                    window.step1();
+                } else {
+                    window.mobileStep1();
+                }
                 break;
             case "second":
                 window.step = 2;
-                window.step2();
-                // if (!isMobile) {
-                // } else {
-                //     step2Mobile();
-                // }
+                if (!isMobile) {
+                    window.step2();
+                } else {
+                    window.mobileStep2();
+                }
                 setTimeout(() => {
                     animateTyping(second_title, $('.second__text').data('text'), '.second__text .Typewriter__wrapper');
                 }, 2000);
                 break;
             case "third":
                 window.step = 3;
-                window.step3();
-                // if (!isMobile) {
-                // } else {
-                //     step3Mobile();
-                // }
+                if (!isMobile) {
+                    window.step3();
+                } else {
+                    window.mobileStep3();
+                }
                 setTimeout(() => {
                     animateTyping(third_shield, $('.third__shield').data('text'), '.third__shield-in .Typewriter__wrapper');
                 }, 3000);
@@ -94,57 +98,57 @@ const scroller = new fullpage('#sections', {
                 break;
             case "fourth":
                 window.step = 4;
-                window.step4();
-                // if (!isMobile) {
-                // } else {
-                //     step6Mobile();
-                // }
+                if (!isMobile) {
+                    window.step4();
+                } else {
+                    window.mobileStep2();
+                }
                 break;
             case "fiveth":
                 window.step = 5;
-                window.step5();
-                // if (!isMobile) {
-                // } else {
-                //     step4Mobile();
-                // }
+                if (!isMobile) {
+                    window.step5();
+                } else {
+                    window.mobileStep4();
+                }
                 setTimeout(() => {
                     animateTyping(fiveth_shield, $('.fiveth__shield').data('text'), '.fiveth__shield-in .Typewriter__wrapper');
                 }, 3000);
                 break;
             case "sixth":
                 window.step = 6;
-                window.step6();
-                // if (!isMobile) {
-                // } else {
-                //     step6Mobile();
-                // }
+                if (!isMobile) {
+                    window.step6();
+                } else {
+                    window.mobileStep2();
+                }
                 break;
             case "seventh":
                 window.step = 7;
-                window.step7();
-                // if (!isMobile) {
-                // } else {
-                //     step5Mobile();
-                // }
+                if (!isMobile) {
+                    window.step7();
+                } else {
+                    window.mobileStep5();
+                }
                 setTimeout(() => {
                     animateTyping(seventh_shield, $('.seventh__shield').data('text'), '.seventh__shield-in .Typewriter__wrapper');
                 }, 3000);
                 break;
             case "eight":
                 window.step = 8;
-                window.step8();
-                // if (!isMobile) {
-                // } else {
-                //     step6Mobile();
-                // }
+                if (!isMobile) {
+                    window.step8();
+                } else {
+                    window.mobileStep2();
+                }
                 break;
             case "nine":
                 window.step = 9;
-                window.step9();
-                // if (!isMobile) {
-                // } else {
-                //     step6Mobile();
-                // }
+                if (!isMobile) {
+                    window.step9();
+                } else {
+                    window.mobileStep1();
+                }
                 setTimeout(() => {
                     animateTyping(nineth_title, $('.nine__title').data('text'), '.nine__title .Typewriter__wrapper');
                 }, 2000);
@@ -166,8 +170,8 @@ const scroller = new fullpage('#sections', {
             $('.mobile-arrows__item.mobile-arrows__item--down').fadeIn();
         }
     },
-    afterLoad: () => {
-        // video.play();
-    }
 });
+if(isMobile) {
+    window.dispatchEvent(new Event('scroll'));
+}
 })

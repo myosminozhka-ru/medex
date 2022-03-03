@@ -136,47 +136,48 @@ const modelurl = "./models/border.glb";
       model.children[6].visible = false;
       modelDots = model;
     });
+    if (!isMobile) {
+      loadModel(line6).then((model) => {
+        model.traverse((node) => {
+          if (node.isMesh){
+            node.material = material;
+          }
+        });
 
-    loadModel(line6).then((model) => {
-      model.traverse((node) => {
-        if (node.isMesh){
-          node.material = material;
-        }
+        let modelc = model.clone();
+        modelc.scale.set(1.85, 1.85, 1.85);
+
+        let linePivot = new THREE.Object3D();
+        linePivot.add(modelc);
+        linePivot.rotation.z = Math.PI / 4;
+        line1 = modelc;
+        scene.add(linePivot);
+
+        modelc = model.clone();
+        modelc.scale.set(1.85, 1.85, 1.85);
+        linePivot = new THREE.Object3D();
+        linePivot.add(modelc);
+        linePivot.rotation.z = -Math.PI / 4;
+        line2 = modelc;
+        scene.add(linePivot);
+
+        modelc = model.clone();
+        modelc.scale.set(1.25, 1.25, 1.25);
+        linePivot = new THREE.Object3D();
+        linePivot.add(modelc);
+        linePivot.rotation.z = Math.PI / 2;
+        line3 = modelc;
+        scene.add(linePivot);
+
+        modelc = model.clone();
+        modelc.scale.set(1.25, 1.25, 1.25);
+        linePivot = new THREE.Object3D();
+        linePivot.add(modelc);
+        linePivot.position.y = 5;
+        line4 = modelc;
+        scene.add(linePivot);
       });
-
-      let modelc = model.clone();
-      modelc.scale.set(1.85, 1.85, 1.85);
-
-      let linePivot = new THREE.Object3D();
-      linePivot.add(modelc);
-      linePivot.rotation.z = Math.PI / 4;
-      line1 = modelc;
-      scene.add(linePivot);
-
-      modelc = model.clone();
-      modelc.scale.set(1.85, 1.85, 1.85);
-      linePivot = new THREE.Object3D();
-      linePivot.add(modelc);
-      linePivot.rotation.z = -Math.PI / 4;
-      line2 = modelc;
-      scene.add(linePivot);
-
-      modelc = model.clone();
-      modelc.scale.set(1.25, 1.25, 1.25);
-      linePivot = new THREE.Object3D();
-      linePivot.add(modelc);
-      linePivot.rotation.z = Math.PI / 2;
-      line3 = modelc;
-      scene.add(linePivot);
-
-      modelc = model.clone();
-      modelc.scale.set(1.25, 1.25, 1.25);
-      linePivot = new THREE.Object3D();
-      linePivot.add(modelc);
-      linePivot.position.y = 5;
-      line4 = modelc;
-      scene.add(linePivot);
-    });
+    }
 
     let shield1l = new THREE.Object3D();
     shield1l.position.y = fixY; 
@@ -628,6 +629,190 @@ const modelurl = "./models/border.glb";
       new TWEEN.Tween(shield1Pivot.scale).to({ x: 10, y: 10, z: 10}, 1000).start();
       new TWEEN.Tween(shield2Pivot.scale).to({ x: 10, y: 10, z: 10}, 1000).start();
       new TWEEN.Tween(shield3Pivot.scale).to({ x: 10, y: 10, z: 10}, 1000).start();
+    }
+
+
+
+    window.mobileStep1 = () => {
+      console.log('step = 1 started');
+      rotationPivot = true;
+      clearTasks();
+
+      // modelDots.children[1].visible = false;
+      // modelDots.children[2].visible = false;
+      // modelDots.children[4].visible = false;
+      // modelDots.children[5].visible = false;
+      // line1.visible = false;
+      // line2.visible = false;
+      // line3.visible = false;
+      // line4.visible = false;
+
+      let cameraFrom = {
+        x: camera.position.x,
+        y: camera.position.y,
+        z: camera.position.z
+      }
+
+      new TWEEN.Tween(cameraFrom)
+      .to({x: 0, y: 15, z: 20}, 2000)
+      .easing(TWEEN.Easing.Cubic.Out)        
+      .onUpdate(function () {
+        camera.position.set(cameraFrom.x, cameraFrom.y, cameraFrom.z);
+      }).start();
+    }
+
+    window.mobileStep2 = () => {
+      rotationPivot = true;
+      // modelDots.children[0].visible = false;
+      modelDots.children[1].visible = false;
+      modelDots.children[2].visible = false;
+      modelDots.children[4].visible = false;
+      modelDots.children[5].visible = false;
+      modelDots.children[6].visible = false;
+      
+      clearTasks();
+      cameraSetup({x: 0, y: 0, z: 0}, 1450);
+
+      let cameraFrom = {
+        x: camera.position.x,
+        y: camera.position.y,
+        z: camera.position.z
+      }
+
+      new TWEEN.Tween(cameraFrom)
+      .to({x: 0, y: 20, z: 100}, 2000)
+      .easing(TWEEN.Easing.Cubic.Out)
+      .onComplete(function(){
+      })       
+      .onUpdate(function () {
+        camera.position.set(cameraFrom.x, cameraFrom.y, cameraFrom.z);
+      }).start();
+
+      lockShiled2 = false;
+      lockLookShieled = false;
+    }
+
+    window.mobileStep3 = () => {
+
+      rotationPivot = false;
+      modelDots.children[0].visible = false;
+      modelDots.children[1].visible = false;
+      modelDots.children[2].visible = false;
+      modelDots.children[4].visible = false;
+      modelDots.children[5].visible = false;
+      modelDots.children[6].visible = false;
+      
+      clearTasks();
+
+      lockShiled2 = true;
+      lockLookShieled = true;
+
+      shield2.position.copy(shield2StartPosition);
+      cameraSetup({x: 0, y: 0, z: 0}, 2000);
+
+      let cameraFrom = {
+        x: camera.position.x,
+        y: camera.position.y,
+        z: camera.position.z
+      }
+
+      new TWEEN.Tween(cameraFrom)
+      .to({x: 0, y: 10, z: 80}, 2000)
+      .easing(TWEEN.Easing.Cubic.Out)      
+      .onUpdate(function () {
+        camera.position.set(cameraFrom.x, cameraFrom.y, cameraFrom.z);
+      })
+      .onComplete(function() {
+        new TWEEN.Tween(pivot.rotation)
+        .to({y: 1.6, x: 0.5}, 2000)
+        .easing(TWEEN.Easing.Cubic.Out)  
+        .onComplete(function() {
+          modelDots.children[2].visible = false;
+          modelDots.children[5].visible = true;
+        }).start();
+      }).start();
+    }
+    
+    window.mobileStep4 = () => {
+
+      rotationPivot = false;
+      modelDots.children[0].visible = false;
+      modelDots.children[1].visible = false;
+      modelDots.children[2].visible = false;
+      modelDots.children[4].visible = false;
+      modelDots.children[5].visible = false;
+      modelDots.children[6].visible = false;
+
+      clearTasks();
+
+      lockShiled2 = true;
+      lockLookShieled = true;
+
+      shield2.position.copy(shield2StartPosition);
+      cameraSetup({x: 0, y: 0, z: 0}, 2000);
+
+      let cameraFrom = {
+        x: camera.position.x,
+        y: camera.position.y,
+        z: camera.position.z
+      }
+
+      new TWEEN.Tween(cameraFrom)
+      .to({x: 0, y: 10, z: 80}, 2000)
+      .easing(TWEEN.Easing.Cubic.Out)      
+      .onUpdate(function () {
+        camera.position.set(cameraFrom.x, cameraFrom.y, cameraFrom.z);
+      })
+      .onComplete(function() {
+        new TWEEN.Tween(pivot.rotation)
+        .to({y: 3.9, x: 0.5}, 2000)
+        .easing(TWEEN.Easing.Cubic.Out)  
+        .onComplete(function() {
+          modelDots.children[1].visible = false;
+          modelDots.children[4].visible = true;
+        }).start();
+      }).start();
+    }
+
+    window.mobileStep5 = () => {
+
+      rotationPivot = false;
+      modelDots.children[0].visible = false;
+      modelDots.children[1].visible = false;
+      modelDots.children[2].visible = false;
+      modelDots.children[4].visible = false;
+      modelDots.children[5].visible = false;
+      modelDots.children[6].visible = false;
+
+      clearTasks();
+
+      lockShiled2 = true;
+      lockLookShieled = true;
+
+      shield2.position.copy(shield2StartPosition);
+      cameraSetup({x: 0, y: 0, z: 0}, 2000);
+
+      let cameraFrom = {
+        x: camera.position.x,
+        y: camera.position.y,
+        z: camera.position.z
+      }
+
+      new TWEEN.Tween(cameraFrom)
+      .to({x: 0, y: 10, z: 80}, 2000)
+      .easing(TWEEN.Easing.Cubic.Out)      
+      .onUpdate(function () {
+        camera.position.set(cameraFrom.x, cameraFrom.y, cameraFrom.z);
+      })
+      .onComplete(function() {
+        new TWEEN.Tween(pivot.rotation)
+        .to({y: 2.9, x: 2}, 2000)
+        .easing(TWEEN.Easing.Cubic.Out)  
+        .onComplete(function() {
+          modelDots.children[0].visible = false;
+          modelDots.children[6].visible = true;
+        }).start();
+      }).start();
     }
 
     function sphere(object) {
