@@ -620,7 +620,7 @@ const modelurl = "./models/border.glb";
       }
 
       new TWEEN.Tween(cameraFrom)
-      .to({x: -10, y: 10, z: 75}, 4000)
+      .to({x: -23, y: 5, z: 75}, 4000)
       .easing(TWEEN.Easing.Cubic.Out)        
       .onUpdate(function () {
         camera.position.set(cameraFrom.x, cameraFrom.y, cameraFrom.z);
@@ -678,6 +678,11 @@ const modelurl = "./models/border.glb";
         y: camera.position.y,
         z: camera.position.z
       }
+
+      new TWEEN.Tween(pivot.rotation)
+        .to({y: 0, x: 0}, 2000)
+        .easing(TWEEN.Easing.Cubic.Out)
+        .start();
 
       new TWEEN.Tween(cameraFrom)
       .to({x: 0, y: 20, z: 100}, 2000)

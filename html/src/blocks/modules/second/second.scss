@@ -11,10 +11,10 @@
         padding: vw(270) vw(120) vw(247) vw(120);
         box-sizing: border-box;
         @media all and (max-width: 1023px) {
-            padding: 102px 15px 40px;
+            padding: 152px 15px 40px;
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: center;
             text-align: center;
         }

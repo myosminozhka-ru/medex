@@ -740,15 +740,13 @@ body {
 .third__in {
   width: 100%;
   height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  padding: 14.0625vw 6.25vw 12.86458vw 6.25vw;
   box-sizing: border-box;
 }
 
 .third__shield {
   width: 30.3125vw;
-  padding: 2.76042vw;
+  height: 36.71875vw;
   box-sizing: border-box;
   display: flex;
   justify-content: center;
@@ -756,12 +754,7 @@ body {
   font-weight: bold;
   font-size: 2.39583vw;
   line-height: 140%;
-  text-align: center;
   color: #FFFFFF;
-  border: 4px solid #0399c7;
-  box-shadow: 0px 0px 0.78125vw 0px white;
-  text-shadow: 0px -0.15625vw 3.85417vw rgba(33, 219, 239, 0.8), 0px 0.26042vw 1.45833vw rgba(3, 196, 161, 0.5);
-  background: #000;
 }
 
 .fourth {
@@ -807,16 +800,17 @@ body {
 .fiveth__in {
   width: 100%;
   height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  padding: 14.0625vw 6.25vw 12.86458vw 6.25vw;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
 }
 
 .fiveth__shield {
   width: 30.3125vw;
   height: 36.71875vw;
-  padding: 2.76042vw 2.76042vw 6.875vw;
   box-sizing: border-box;
   display: flex;
   justify-content: center;
@@ -824,9 +818,7 @@ body {
   font-weight: bold;
   font-size: 2.39583vw;
   line-height: 140%;
-  text-align: center;
   color: #FFFFFF;
-  text-shadow: 0px -0.15625vw 3.85417vw rgba(33, 219, 239, 0.8), 0px 0.26042vw 1.45833vw rgba(3, 196, 161, 0.5);
 }
 
 .sixth {
@@ -871,16 +863,13 @@ body {
 .seventh__in {
   width: 100%;
   height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  padding: 14.0625vw 6.25vw 12.86458vw 6.25vw;
   box-sizing: border-box;
 }
 
 .seventh__shield {
   width: 30.3125vw;
   height: 36.71875vw;
-  padding: 2.76042vw 2.76042vw 6.875vw;
   box-sizing: border-box;
   display: flex;
   justify-content: center;
@@ -888,9 +877,7 @@ body {
   font-weight: bold;
   font-size: 2.39583vw;
   line-height: 140%;
-  text-align: center;
   color: #FFFFFF;
-  text-shadow: 0px -0.15625vw 3.85417vw rgba(33, 219, 239, 0.8), 0px 0.26042vw 1.45833vw rgba(3, 196, 161, 0.5);
 }
 
 .eight {
@@ -963,7 +950,7 @@ body {
   left: 0;
   height: 1px;
   width: 0;
-  background: #029d81;
+  background: #0cffff;
   box-shadow: 0px 0px 5px 0px white;
   transition: all .3s ease;
 }
@@ -1269,7 +1256,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: #0b1534;
+  background: #000;
   z-index: 300;
 }
 
@@ -1348,6 +1335,7 @@ body {
 
 .counter__current {
   font-weight: bold;
+  font-size: 21px;
 }
 
 .counter__delim {
@@ -1462,10 +1450,10 @@ body {
   }
 
   .second__in {
-    padding: 102px 15px 40px;
+    padding: 152px 15px 40px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     text-align: center;
   }
@@ -1476,18 +1464,27 @@ body {
     margin-bottom: 25px;
   }
 
+  .third__in {
+    padding: 152px 15px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    flex: 1 1 auto;
+  }
+
   .third__shield {
-    width: 204px;
-    height: 246px;
+    width: 100%;
     padding: 0 19px 20px;
     font-size: 20px;
   }
 
   .fourth__in {
-    padding: 102px 15px 40px;
+    padding: 152px 15px 40px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     text-align: center;
   }
@@ -1501,18 +1498,25 @@ body {
     text-align: center;
   }
 
+  .fiveth__in {
+    padding: 152px 15px 40px;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    flex: 1 1 auto;
+  }
+
   .fiveth__shield {
-    width: 204px;
-    height: 246px;
+    width: 100%;
     padding: 0 19px 20px;
     font-size: 20px;
   }
 
   .sixth__in {
-    padding: 102px 15px 40px;
+    padding: 152px 15px 40px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     text-align: center;
   }
@@ -1526,18 +1530,26 @@ body {
     text-align: center;
   }
 
+  .seventh__in {
+    padding: 152px 15px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+  }
+
   .seventh__shield {
-    width: 204px;
-    height: 246px;
+    width: 100%;
     padding: 0 19px 20px;
     font-size: 20px;
   }
 
   .eight__in {
-    padding: 102px 15px 40px;
+    padding: 152px 15px 40px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     text-align: center;
   }
