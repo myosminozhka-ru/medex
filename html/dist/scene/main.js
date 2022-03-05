@@ -242,6 +242,11 @@ const modelurl = "./models/border.glb";
       }
       if(line3){
         line3.rotation.y += 0.026;
+        if (step == 1) {
+          line3.scale.set(0, 0, 0);
+        } else {
+          line3.scale.set(1.25, 1.25, 1.25);
+        }
       }
       if(line4) {
         line4.rotation.y -= 0.016;
@@ -360,7 +365,7 @@ const modelurl = "./models/border.glb";
           .to(end, 4000)
           .easing(TWEEN.Easing.Cubic.Out)
           .onUpdate(function () {
-            camera.lookAt(point);
+            camera.lookAt(point.x - 5, point.y, point.z);
           })
           .onComplete(function() {
             modelDots.children[2].visible = false;

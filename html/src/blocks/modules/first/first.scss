@@ -12,7 +12,7 @@
         align-items: flex-start;
         justify-content: space-between;
         box-sizing: border-box;
-        padding: vw(170) vw(120) vw(247) vw(120);
+        padding: vw(170) vw(120) vw(120) vw(120);
         @media all and (max-width: 1023px) {
             padding: 102px 15px 40px;
             flex-direction: column;
@@ -20,12 +20,13 @@
         }
     }
     &__shield {
-        width: vw(640);
+        width: vw(540);
         max-height: 100%;
         @media all and (min-width: 1024px) {
             display: none;
-            margin: 0 auto;
+            margin-left: auto;
             pointer-events: none;
+            position: relative;
             &.isInteractable {
                 pointer-events: all;
             }
@@ -48,12 +49,45 @@
         }
     }
     &__name {
-        width: vw(497);
-        font-weight: 400;
-        font-size: vw(32);
-        line-height: vw(50);
+        width: vw(797);
         color: #FFFFFF;
         padding-top: vw(100);
+        @media all and (max-width: 1023px) {
+            width: 100%;
+            text-align: center;
+        }
+        &--title {
+            font-weight: 400;
+            font-size: vw(32);
+            line-height: vw(50);
+            margin-bottom: vw(30);
+            @media all and (max-width: 1023px) {
+                font-size: 20px;
+                line-height: 1.2;
+                padding-top: 0;
+                margin-bottom: 20px;
+                width: 100%;
+                text-align: center;
+            }
+            @media all and (max-width: 400px) and (max-height: 700px) {
+                margin-bottom: 0;
+                font-size: 15px;
+            }
+            @media all and (max-width: 400px) and (max-height: 600px) {
+                margin-bottom: 0;
+                font-size: 15px;
+                text-align: center;
+            }
+        }
+        &--text {
+            font-weight: 400;
+            font-size: vw(23);
+            line-height: 140%;
+            color: #FFFFFF;
+            @media all and (max-width: 1023px) {
+                font-size: 16px;
+            }
+        }
         .Typewriter__wrapper {
             color: #FFFFFF;
         }
@@ -63,36 +97,25 @@
         span {
             color: #21DBEF;
         }
-        @media all and (max-width: 1023px) {
-            font-size: 20px;
-            line-height: 1.2;
-            padding-top: 0;
-            margin-bottom: 20px;
-            width: 100%;
-            text-align: center;
-        }
-        @media all and (max-width: 400px) and (max-height: 700px) {
-            margin-bottom: 0;
-            font-size: 15px;
-        }
-        @media all and (max-width: 400px) and (max-height: 600px) {
-            margin-bottom: 0;
-            font-size: 15px;
-            text-align: center;
-        }
+        
     }
     &__text {
-        width: vw(388);
-        padding-top: vw(70);
+        // padding-top: vw(70);
         font-weight: 400;
         font-size: vw(23);
         line-height: 140%;
         color: #FFFFFF;
-        position: relative;
+        position: absolute;
+        left: 0;
+        right: 0;
         align-self: center;
         transition: height 0.5s ease;
+        display: none;
         @media all and (min-width: 1024px) {
-            display: none;
+            top: 0;
+            bottom: 0;
+            pointer-events: none;
+            text-align: center;
         }
         @media all and (max-width: 1023px) {
             width: 100%;
@@ -103,8 +126,6 @@
             font-weight: normal;
             margin-bottom: 20px;
             position: absolute;
-            left: 0;
-            right: 0;
             bottom: 130px;
             height: 210px;
             pointer-events: none;
@@ -120,6 +141,14 @@
         right: 0;
         opacity: 0;
         transition: opacity .3s ease;
+        @media all and (min-width: 1024px) {
+            bottom: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-sizing: border-box;
+            padding: vw(150);
+        }
         &.isActive {
             opacity: 1;
         }
