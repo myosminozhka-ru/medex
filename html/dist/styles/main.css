@@ -651,7 +651,7 @@ body {
 }
 
 .first__name {
-  width: 41.51042vw;
+  width: 26.04167vw;
   color: #FFFFFF;
   padding-top: 5.20833vw;
 }
@@ -702,6 +702,10 @@ body {
 
 .first__text-in.isActive {
   opacity: 1;
+}
+
+.first__placeholder {
+  width: 26.04167vw;
 }
 
 .first .small_shield {
@@ -1372,7 +1376,6 @@ body {
 @media all and (min-width: 1024px) {
   .first__shield {
     display: none;
-    margin-left: auto;
     pointer-events: none;
     position: relative;
   }
@@ -1459,7 +1462,7 @@ body {
 
   .first__name {
     width: 100%;
-    text-align: center;
+    text-align: justify;
   }
 
   .first__name--title {
@@ -1468,7 +1471,7 @@ body {
     padding-top: 0;
     margin-bottom: 20px;
     width: 100%;
-    text-align: center;
+    text-align: justify;
   }
 
   .first__name--text {
@@ -1496,6 +1499,10 @@ body {
     text-align: center;
   }
 
+  .first__placeholder {
+    display: none;
+  }
+
   .second__in {
     justify-content: flex-start;
     padding: 152px 15px 40px;
@@ -1521,6 +1528,7 @@ body {
     width: 100%;
     padding: 0 19px 20px;
     font-size: 20px;
+    text-align: justify;
   }
 
   .fourth__in {
@@ -1538,7 +1546,7 @@ body {
     padding-top: 0;
     margin-bottom: 20px;
     width: 100%;
-    text-align: center;
+    text-align: justify;
   }
 
   .fiveth__in {
@@ -1553,6 +1561,7 @@ body {
     width: 100%;
     padding: 0 19px 20px;
     font-size: 20px;
+    text-align: justify;
   }
 
   .sixth__in {
@@ -1568,7 +1577,7 @@ body {
     padding-top: 0;
     margin-bottom: 20px;
     width: 100%;
-    text-align: center;
+    text-align: justify;
   }
 
   .seventh__in {
@@ -1582,6 +1591,7 @@ body {
     width: 100%;
     padding: 0 19px 20px;
     font-size: 20px;
+    text-align: justify;
   }
 
   .eight__in {
@@ -1597,7 +1607,7 @@ body {
     padding-top: 0;
     margin-bottom: 20px;
     width: 100%;
-    text-align: center;
+    text-align: justify;
   }
 
   .nine__in {
@@ -1694,25 +1704,25 @@ body {
   .first__name--title {
     margin-bottom: 0;
     font-size: 15px;
-    text-align: center;
+    text-align: justify;
   }
 
   .fourth__text {
     margin-bottom: 0;
     font-size: 15px;
-    text-align: center;
+    text-align: justify;
   }
 
   .sixth__text {
     margin-bottom: 0;
     font-size: 15px;
-    text-align: center;
+    text-align: justify;
   }
 
   .eight__text {
     margin-bottom: 0;
     font-size: 15px;
-    text-align: center;
+    text-align: justify;
   }
 }
 
