@@ -1,0 +1,18 @@
+.to_top {
+    width: vw(40);
+    height: vw(40);
+    position: fixed;
+    z-index: 100;
+    left: vw(100);
+    bottom: vw(20);
+    border: 2px solid #0dffff;
+    border-radius: 50%;
+    display: none;
+    @media all and (max-width: 1023px) {
+        left: auto;
+        bottom: 41px;
+        right: 15px;
+        width: 20px;
+        height: 20px;
+    }
+}

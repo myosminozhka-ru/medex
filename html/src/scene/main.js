@@ -314,7 +314,7 @@ const modelurl = "./models/border.glb";
       }
 
       new TWEEN.Tween(cameraFrom)
-      .to({x: -20, y: 0, z: 80}, 2000)
+      .to({x: -20, y: 0, z: 80}, 3000)
       .easing(TWEEN.Easing.Cubic.Out)
       .onComplete(function(){
       })       
@@ -341,7 +341,7 @@ const modelurl = "./models/border.glb";
       const start = new THREE.Vector3(camera.position.x, camera.position.y, camera.position.z);
 
       // move camera to the target
-      const point = sphere(modelDots.children[2]).center.normalize();
+      const point = sphere(modelDots.children[5]).center.normalize();
       const camDistance = cloneCamera.position.length() * 0.38;
       cloneCamera.position.copy(point).normalize().multiplyScalar(camDistance);
 
@@ -355,21 +355,23 @@ const modelurl = "./models/border.glb";
       })
       .onComplete(function() {
         new TWEEN.Tween(camera.position)
-        .to({z:2, x: -48, y: 0}, 900)
+        .to({z:2, x: -48, y: 0}, 500)
         .onUpdate(function(){
           shield2.lookAt(camera.position);
           camera.lookAt(new THREE.Vector3(shield2StartPosition.x, shield2StartPosition.y, shield2StartPosition.z));
         })
         .onComplete(function() {
           new TWEEN.Tween(camera.position)
-          .to(end, 4000)
+          .to(end, 1500)
           .easing(TWEEN.Easing.Cubic.Out)
           .onUpdate(function () {
-            camera.lookAt(point.x - 5, point.y, point.z);
+            camera.lookAt(point);
           })
           .onComplete(function() {
             modelDots.children[2].visible = false;
             modelDots.children[5].visible = true;
+            console.log(camera.position.x);
+            new TWEEN.Tween(camera.position).to({x: camera.position.x - 3}, 500).start();
           }).start();
         }).start();
       }).start();
@@ -417,7 +419,7 @@ const modelurl = "./models/border.glb";
       }
 
       new TWEEN.Tween(cameraFrom)
-      .to({x: 30, y: 10, z: 80}, 2000)
+      .to({x: 30, y: 10, z: 80}, 3000)
       .easing(TWEEN.Easing.Cubic.Out)        
       .onUpdate(function () {
         camera.position.set(cameraFrom.x, cameraFrom.y, cameraFrom.z);
@@ -454,7 +456,7 @@ const modelurl = "./models/border.glb";
       .to({ x: 0, y: -0.2, z: 0}, 500)
       .onComplete(function() {
         new TWEEN.Tween(cameraFrom)
-        .to({ z: 2, x: 58, y: 0 }, 2000)
+        .to({ z: 2, x: 58, y: 0 }, 1500)
         .delay(500)
        .onUpdate(function(){
           camera.position.set(cameraFrom.x, cameraFrom.y, cameraFrom.z);
@@ -462,7 +464,7 @@ const modelurl = "./models/border.glb";
           camera.lookAt(shield2.position)
         }).onComplete(function() {
           new TWEEN.Tween(camera.position)
-          .to(end, 900)
+          .to(end, 500)
           .onUpdate(function(){
             shield2.lookAt(camera.position)
             //camera.lookAt(shield2.position)
@@ -503,7 +505,7 @@ const modelurl = "./models/border.glb";
       }
 
       new TWEEN.Tween(cameraFrom)
-      .to({x: -20, y: 0, z: 80}, 4000)
+      .to({x: -20, y: 0, z: 80}, 3000)
       .easing(TWEEN.Easing.Cubic.Out)
       .onComplete(function(){
       })       
@@ -536,17 +538,17 @@ const modelurl = "./models/border.glb";
       const end = new THREE.Vector3(cloneCamera.position.x, cloneCamera.position.y, cloneCamera.position.z);
 
       new TWEEN.Tween(camera.position)
-      .to({z: 80, x: 28, y: 0 }, 900)
+      .to({z: 80, x: 28, y: 0 }, 500)
       .onComplete(function() {
         new TWEEN.Tween(camera.position)
-        .to({z: 0.5, x: 48, y: 0}, 900)
+        .to({z: 0.5, x: 48, y: 0}, 500)
         .onUpdate(function() {
           shield2.lookAt(camera.position);
           camera.lookAt(shield2.position);
         })
         .onComplete(function() {
           new TWEEN.Tween(camera.position)
-          .to(end, 4000)
+          .to(end, 2000)
           .easing(TWEEN.Easing.Cubic.Out)
           .onUpdate(function(){
             shield2.lookAt(camera.position);
@@ -601,7 +603,7 @@ const modelurl = "./models/border.glb";
       }
 
       new TWEEN.Tween(cameraFrom)
-      .to({ x: 30, y: 10, z: 80}, 4000)
+      .to({ x: 30, y: 10, z: 80}, 3000)
       .easing(TWEEN.Easing.Cubic.Out)        
       .onUpdate(function () {
         camera.position.set(cameraFrom.x, cameraFrom.y, cameraFrom.z);
@@ -625,7 +627,7 @@ const modelurl = "./models/border.glb";
       }
 
       new TWEEN.Tween(cameraFrom)
-      .to({x: -23, y: 5, z: 75}, 4000)
+      .to({x: -23, y: 5, z: 75}, 3000)
       .easing(TWEEN.Easing.Cubic.Out)        
       .onUpdate(function () {
         camera.position.set(cameraFrom.x, cameraFrom.y, cameraFrom.z);

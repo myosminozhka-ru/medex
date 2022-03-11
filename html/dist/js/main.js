@@ -210,7 +210,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
   var scroller = new fullpage_js__WEBPACK_IMPORTED_MODULE_1___default.a('#sections', {
     anchors: ['first', 'second', 'third', 'fourth', 'fiveth', 'sixth', 'seventh', 'eight', 'nine'],
     // licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
-    scrollingSpeed: 1500,
+    scrollingSpeed: 3000,
     // autoScrolling: false,
     controlArrows: true,
     afterRender: function afterRender(section, origin, destination, direction) {
@@ -358,11 +358,17 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
 
       if (destination.anchor === 'nine') {
         jquery__WEBPACK_IMPORTED_MODULE_0___default()('.mobile-arrows__item.mobile-arrows__item--down').fadeOut();
+        jquery__WEBPACK_IMPORTED_MODULE_0___default()('.to_top').fadeIn();
       } else {
         jquery__WEBPACK_IMPORTED_MODULE_0___default()('.mobile-arrows__item.mobile-arrows__item--down').fadeIn();
+        jquery__WEBPACK_IMPORTED_MODULE_0___default()('.to_top').fadeOut();
       }
     }
   });
+  setTimeout(function () {
+    fullpage_api.moveTo('first', 0);
+    console.log('back to the first');
+  }, 2000);
 
   if (isMobile) {
     window.dispatchEvent(new Event('scroll'));

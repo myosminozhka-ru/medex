@@ -4,6 +4,8 @@ import Typewriter from 'typewriter-effect/dist/core';
 
 $(function() {
 
+
+
 const third_shield = new Typewriter('.third__shield-in', {
     strings: ['Mosoblkino "has been organizing film distribution.'],
     autoStart: false,
@@ -47,7 +49,7 @@ function animateTyping(writer, text, selector) {
 const scroller = new fullpage('#sections', {
     anchors: ['first', 'second', 'third', 'fourth', 'fiveth', 'sixth', 'seventh', 'eight', 'nine'],
     // licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
-    scrollingSpeed: 1500,
+    scrollingSpeed: 3000,
     // autoScrolling: false,
     controlArrows: true,
     afterRender: ( section, origin, destination, direction) => {
@@ -166,11 +168,18 @@ const scroller = new fullpage('#sections', {
 
         if (destination.anchor === 'nine') {
             $('.mobile-arrows__item.mobile-arrows__item--down').fadeOut();
+            $('.to_top').fadeIn();
+
         } else {
             $('.mobile-arrows__item.mobile-arrows__item--down').fadeIn();
+            $('.to_top').fadeOut();
         }
     },
 });
+setTimeout(() => {
+    fullpage_api.moveTo('first', 0);
+    console.log('back to the first')
+}, 2000);
 if(isMobile) {
     window.dispatchEvent(new Event('scroll'));
 }
