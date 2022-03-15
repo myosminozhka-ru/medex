@@ -280,6 +280,7 @@ const modelurl = "./models/border.glb";
       new TWEEN.Tween( camera.rotation ).to(point, duration ? duration : 2000 ).start();
     }
 
+
     window.step1 = () => {
       rotationPivot = true;
 
@@ -292,7 +293,7 @@ const modelurl = "./models/border.glb";
       }
 
       new TWEEN.Tween(cameraFrom)
-      .to({x: 0, y: 10, z: 30}, 2000)
+      .to({x: 0, y: 15, z: 20}, 2000)
       .easing(TWEEN.Easing.Cubic.Out)        
       .onUpdate(function () {
         camera.position.set(cameraFrom.x, cameraFrom.y, cameraFrom.z);
@@ -328,60 +329,42 @@ const modelurl = "./models/border.glb";
 
     window.step3 = () => {
       rotationPivot = false;
+      modelDots.children[1].visible = true;
+      modelDots.children[4].visible = false;
+
+      modelDots.children[0].visible = true;
+      modelDots.children[6].visible = false;
 
       clearTasks();
-      
-      lockShiled2 = true;
-      lockLookShieled = true;
+      cameraSetup({x: 0, y: 0, z: 0}, 1450);
+      new TWEEN.Tween(pivot.rotation).to({x: 0, y: 0, z: 0}, 1500).start();
 
-      shield2.position.copy(shield2StartPosition);
+      let cameraFrom = {
+        x: camera.position.x,
+        y: camera.position.y,
+        z: camera.position.z
+      }
 
-      let cloneCamera = camera.clone();
-      // get the current camera position
-      const start = new THREE.Vector3(camera.position.x, camera.position.y, camera.position.z);
+      pivot.rotation.x = 0;
+      pivot.rotation.y = 0;
+      pivot.rotation.z = 0;
 
-      // move camera to the target
-      const point = sphere(modelDots.children[5]).center.normalize();
-      const camDistance = cloneCamera.position.length() * 0.38;
-      cloneCamera.position.copy(point).normalize().multiplyScalar(camDistance);
-
-      // save the camera position
-      const end =  new THREE.Vector3(cloneCamera.position.x, cloneCamera.position.y, cloneCamera.position.z);
-
-      new TWEEN.Tween(camera.position)
-      .to({z: 80, x: -30, y: 0}, 500)
-      .onUpdate(function(){
-        camera.lookAt(new THREE.Vector3(shield2StartPosition.x, shield2StartPosition.y, shield2StartPosition.z));
-      })
-      .onComplete(function() {
-        new TWEEN.Tween(camera.position)
-        .to({z:2, x: -48, y: 0}, 500)
-        .onUpdate(function(){
-          shield2.lookAt(camera.position);
-          camera.lookAt(new THREE.Vector3(shield2StartPosition.x, shield2StartPosition.y, shield2StartPosition.z));
-        })
-        .onComplete(function() {
-          new TWEEN.Tween(camera.position)
-          .to(end, 1500)
-          .easing(TWEEN.Easing.Cubic.Out)
-          .onUpdate(function () {
-            camera.lookAt(point);
-          })
-          .onComplete(function() {
-            modelDots.children[2].visible = false;
-            modelDots.children[5].visible = true;
-            console.log(camera.position.x);
-            new TWEEN.Tween(camera.position).to({x: camera.position.x - 3}, 500).start();
-          }).start();
-        }).start();
+      new TWEEN.Tween(cameraFrom)
+      .to({x: -10, y: 0, z: 35}, 1500)
+      .easing(TWEEN.Easing.Cubic.Out)
+      .onComplete(function(){
+      })       
+      .onUpdate(function () {
+        camera.position.set(cameraFrom.x, cameraFrom.y, cameraFrom.z);
+      }).onComplete(function() {
+        modelDots.children[2].visible = false;
+        modelDots.children[5].visible = true;
+        new TWEEN.Tween(pivot.rotation).to({x: 0, y: 1.3, z: 0.8}, 1500).start();
       }).start();
 
-      new TWEEN.Tween(shield2Pivot.rotation)
-      .onUpdate(function() {
-        shield2.lookAt(camera.position);
-      })
-      .to({z: 0}, 1000)
-      .start();
+      shield2.position.copy(shield2StartPosition);
+      lockShiled2 = false;
+      lockLookShieled = false;
     }
 
     window.step4 = () => {
