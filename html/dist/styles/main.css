@@ -792,6 +792,9 @@ body {
   height: 100%;
   padding: 8.85417vw 6.25vw 12.86458vw 6.25vw;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .fourth__text {
@@ -1545,8 +1548,6 @@ body {
 
   .fourth__in {
     padding: 152px 15px 40px;
-    display: flex;
-    flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     text-align: center;
