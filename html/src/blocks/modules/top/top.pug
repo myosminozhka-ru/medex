@@ -3,3 +3,15 @@ a.to_top(href="#first").
         <path d="M12 33L24 21L36 33" stroke="#0dffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
         <path d="M12 13H36" stroke="#0dffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
     </svg>
+.modal(data-modal_id="123")
+    .modal__in
+        form.modal__form
+            .modal__form-item
+                input(type="text" placeholder="Name")
+            .modal__form-item
+                input(type="password" placeholder="Password")
+            .modal__form-button
+                button(type="submit")
+                    span.text Log In
+                    span.icon
+                        img(src="img/svg/arrow.svg" alt="" width="100%")

@@ -1388,6 +1388,112 @@ body {
   display: none;
 }
 
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 200;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .3s ease;
+}
+
+.modal.isOpened {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal:after {
+  content: "";
+  width: 0;
+  height: 100%;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.modal__in {
+  text-align: left;
+  display: inline-block;
+  vertical-align: middle;
+  width: 100%;
+  max-width: 26.04167vw;
+  background: #000000;
+  padding: 2.08333vw;
+}
+
+.modal__form-item:not(:first-child) {
+  margin-top: 1.04167vw;
+}
+
+.modal__form-item:after {
+  content: "";
+  display: block;
+  top: 100%;
+  left: 0;
+  height: 1px;
+  width: 100%;
+  background: #0cffff;
+  box-shadow: 0px 0px 5px 0px white;
+  transition: all .3s ease;
+}
+
+.modal__form-item input:not([type="hidden"]) {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  height: 3.95833vw;
+  padding: 0;
+  background: transparent url("../img/svg/arrow.svg") 100% 50%/ 1.61458vw no-repeat;
+  border: none;
+  outline: none;
+}
+
+.modal__form-item input:not([type="hidden"]),
+.modal__form-item input:not([type="hidden"])::placeholder,
+.modal__form-item input:not([type="hidden"])::-webkit-placeholder {
+  font-size: 1.25vw;
+  line-height: 1;
+  color: #fff;
+}
+
+.modal__form-button {
+  margin-top: 2.60417vw;
+}
+
+.modal__form-button button {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #03C4A1;
+  border-radius: 0.26042vw;
+  padding: 1.04167vw 1.82292vw;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background .3s ease-in-out;
+}
+
+.modal__form-button button:hover {
+  background: #0ce5ec;
+}
+
+.modal__form-button button .text {
+  font-size: 1.25vw;
+  line-height: 1;
+  color: #FFFFFF;
+}
+
+.modal__form-button button .icon {
+  display: block;
+  width: 1.61458vw;
+  font-size: 0;
+  margin-left: 1.04167vw;
+}
+
 @media all and (min-width: 1024px) {
   .first__shield {
     display: none;
@@ -1682,6 +1788,48 @@ body {
     right: 15px;
     width: 20px;
     height: 20px;
+  }
+
+  .modal__in {
+    padding: 20px;
+    max-width: 320px;
+    box-sizing: border-box;
+  }
+
+  .modal__form-item:not(:first-child) {
+    margin-top: 10px;
+  }
+
+  .modal__form-item input:not([type="hidden"]) {
+    height: 44px;
+    background: transparent url("../img/svg/arrow.svg") -31px 50%/31px no-repeat;
+  }
+
+  .modal__form-item input:not([type="hidden"]),
+  .modal__form-item input:not([type="hidden"])::placeholder,
+  .modal__form-item input:not([type="hidden"])::-webkit-placeholder {
+    font-size: 16px;
+  }
+
+  .modal__form-button {
+    margin-top: 30px;
+  }
+
+  .modal__form-button button {
+    border-radius: 5px;
+    padding: 20px 35px;
+    width: 100%;
+    box-sizing: border-box;
+    justify-content: space-between;
+  }
+
+  .modal__form-button button .text {
+    font-size: 20px;
+  }
+
+  .modal__form-button button .icon {
+    width: 31px;
+    margin-left: 20px;
   }
 }
 
