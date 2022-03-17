@@ -745,6 +745,7 @@ body {
   font-size: 3.33333vw;
   line-height: 4.01042vw;
   margin-bottom: 2.08333vw;
+  max-width: 50%;
   color: #FFFFFF;
 }
 
@@ -1279,6 +1280,12 @@ body {
   color: #fff;
 }
 
+.section.active .nine__form-item.has-error input:not([type="hidden"]),
+.section.active .nine__form-item.has-error input:not([type="hidden"])::placeholder,
+.section.active .nine__form-item.has-error input:not([type="hidden"])::-webkit-placeholder {
+  color: red !important;
+}
+
 .section.active .nine__form-button {
   opacity: 1;
   visibility: visible;
@@ -1494,6 +1501,10 @@ body {
   margin-left: 1.04167vw;
 }
 
+.Typewriter__cursor {
+  color: #21DBEF !important;
+}
+
 @media all and (min-width: 1024px) {
   .first__shield {
     display: none;
@@ -1635,6 +1646,7 @@ body {
     font-size: 40px;
     line-height: 48px;
     margin-bottom: 25px;
+    max-width: 100%;
   }
 
   .third__in {

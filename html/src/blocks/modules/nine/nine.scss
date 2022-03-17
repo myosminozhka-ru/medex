@@ -98,6 +98,7 @@
             //     transition: background-position 0.5s ease-in-out !important;
             // }
         }
+        
     }
     &__form-button {
         margin-top: vw(50);
@@ -159,6 +160,13 @@
     &::placeholder,
     &::-webkit-placeholder {
         color: #fff;
+    }
+}
+.section.active .nine__form-item.has-error input:not([type="hidden"]) {
+    &,
+    &::placeholder,
+    &::-webkit-placeholder {
+        color: red !important;
     }
 }
 .section.active .nine__form-button {

@@ -25,11 +25,13 @@
         font-size: vw(64);
         line-height: vw(77);
         margin-bottom: vw(40);
+        max-width: 50%;
         color: #FFFFFF;
         @media all and (max-width: 1023px) {
             font-size: 40px;
             line-height: 48px;
             margin-bottom: 25px;
+            max-width: 100%;
         }
     }
 }
