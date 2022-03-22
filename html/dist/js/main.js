@@ -177,27 +177,27 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
   var third_shield = new typewriter_effect_dist_core__WEBPACK_IMPORTED_MODULE_2___default.a('.third__shield-in', {
     strings: ['Mosoblkino "has been organizing film distribution.'],
     autoStart: false,
-    delay: 30
+    delay: 15
   });
   var fiveth_shield = new typewriter_effect_dist_core__WEBPACK_IMPORTED_MODULE_2___default.a('.fiveth__shield-in', {
     strings: ['Mosoblkino "has been organizing film distribution.'],
     autoStart: false,
-    delay: 30
+    delay: 15
   });
   var seventh_shield = new typewriter_effect_dist_core__WEBPACK_IMPORTED_MODULE_2___default.a('.seventh__shield-in', {
     strings: ['Mosoblkino "has been organizing film distribution.'],
     autoStart: false,
-    delay: 30
+    delay: 15
   });
   var nineth_title = new typewriter_effect_dist_core__WEBPACK_IMPORTED_MODULE_2___default.a('.nine__title', {
     strings: ['Feedback form'],
     autoStart: false,
-    delay: 30
+    delay: 15
   });
   var second_title = new typewriter_effect_dist_core__WEBPACK_IMPORTED_MODULE_2___default.a('.second__text', {
     strings: ['Our commitments'],
     autoStart: false,
-    delay: 30
+    delay: 15
   });
 
   function animateTyping(writer, text, selector) {

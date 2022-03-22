@@ -21,9 +21,6 @@
 }
 
 .mobile-arrows {
-    @media all and (min-width: 1024px) {
-        display: none;
-    }
     &__item {
         z-index: 10;
         position: fixed;
@@ -39,6 +36,9 @@
         &--up {
             top: 80px;
             display: none;
+            @media all and (min-width: 1024px) {
+                top: 40px;
+            }
         }
         &--down {
             bottom: 40px;

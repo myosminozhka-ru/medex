@@ -780,6 +780,10 @@ body {
   color: #FFFFFF;
 }
 
+.third__shield-in {
+  width: 100%;
+}
+
 .fourth {
   position: absolute;
   top: 0;
@@ -1536,8 +1540,8 @@ body {
     padding: 7.8125vw;
   }
 
-  .mobile-arrows {
-    display: none;
+  .mobile-arrows__item--up {
+    top: 40px;
   }
 
   .counter {

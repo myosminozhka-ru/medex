@@ -9,31 +9,31 @@ $(function() {
 const third_shield = new Typewriter('.third__shield-in', {
     strings: ['Mosoblkino "has been organizing film distribution.'],
     autoStart: false,
-    delay: 30
+    delay: 15
 });
 
 const fiveth_shield = new Typewriter('.fiveth__shield-in', {
     strings: ['Mosoblkino "has been organizing film distribution.'],
     autoStart: false,
-    delay: 30
+    delay: 15
 });
 
 const seventh_shield = new Typewriter('.seventh__shield-in', {
     strings: ['Mosoblkino "has been organizing film distribution.'],
     autoStart: false,
-    delay: 30
+    delay: 15
 });
 
 const nineth_title = new Typewriter('.nine__title', {
     strings: ['Feedback form'],
     autoStart: false,
-    delay: 30
+    delay: 15
 });
 
 const second_title = new Typewriter('.second__text', {
     strings: ['Our commitments'],
     autoStart: false,
-    delay: 30
+    delay: 15
 });
 
 
