@@ -548,6 +548,10 @@ body {
   color: #FFFFFF;
 }
 
+.Typewriter__wrapper {
+  width: 100%;
+}
+
 .section {
   position: relative;
   height: 100vh;
@@ -851,6 +855,10 @@ body {
   color: #FFFFFF;
 }
 
+.fiveth__shield-in {
+  width: 100%;
+}
+
 .sixth {
   position: absolute;
   top: 0;
@@ -914,6 +922,10 @@ body {
   font-size: 2.39583vw;
   line-height: 140%;
   color: #FFFFFF;
+}
+
+.seventh__shield-in {
+  width: 100%;
 }
 
 .eight {
