@@ -78,9 +78,10 @@
             pointer-events: none;
             // border-bottom: 2px solid #fff;
             outline: none;
-            
+            padding-right: vw(41);
             @media all and (max-width: 1023px) {
                 height: 44px;
+                padding-right: 41px;
                 background: transparent url('../img/svg/arrow.svg') -31px 50%/ 31px no-repeat;
             }
             &,
@@ -172,4 +173,16 @@
 .section.active .nine__form-button {
     opacity: 1;
     visibility: visible;
+}
+
+.logoOsmi {
+    @media all and (max-width: 1023px) {
+        display: inline-block;
+        max-width: 100px;
+        padding: 10px;
+        box-sizing: border-box;
+        img {
+            max-width: 100%;
+        }
+    }
 }

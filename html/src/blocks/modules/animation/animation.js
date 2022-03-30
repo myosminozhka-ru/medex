@@ -18,3 +18,7 @@ $(document).on('click', function(e){
       return;
       $(`.modal`).removeClass('isOpened');
 });
+
+$(window).bind('orientationchange', function (event) {
+    location.reload(true);
+});

@@ -42,10 +42,6 @@ function animateTyping(writer, text, selector) {
     $(selector).html('');
     writer.typeString(text).start();
 }
-
-
-// const video = $('.animation video').get(0);
-// console.log(video);
 const scroller = new fullpage('#sections', {
     anchors: ['first', 'second', 'third', 'fourth', 'fiveth', 'sixth', 'seventh', 'eight', 'nine'],
     // licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
@@ -54,7 +50,6 @@ const scroller = new fullpage('#sections', {
     controlArrows: true,
     afterRender: ( section, origin, destination, direction) => {
 		$('.counter__current').text(section.index + 1);
-        console.log('window.step', window.step);
         if ( window.step == 1) {
             window.mobileStep1();
         }
@@ -159,7 +154,6 @@ const scroller = new fullpage('#sections', {
                 window.step = 1;
                 window.step1();
          }
-         console.log(destination.anchor);
         if (destination.anchor == 'first') {
             $('.mobile-arrows__item.mobile-arrows__item--up').fadeOut();
         } else {
@@ -178,7 +172,6 @@ const scroller = new fullpage('#sections', {
 });
 setTimeout(() => {
     fullpage_api.moveTo('first', 0);
-    console.log('back to the first')
 }, 2000);
 if(isMobile) {
     window.dispatchEvent(new Event('scroll'));

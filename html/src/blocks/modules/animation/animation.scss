@@ -22,13 +22,14 @@
 
 .mobile-arrows {
     &__item {
-        z-index: 10;
+        z-index: 201;
         position: fixed;
         left: 0;
         right: 0;
         height: 23px;
         text-align: center;
         font-size: 0;
+        cursor: pointer;
         svg path {
             stroke: #fff;
             transition: all 0.2s ease;

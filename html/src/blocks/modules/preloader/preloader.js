@@ -21,7 +21,6 @@ $(function() {
             transform: `scale(1) translate(0, 0)`,
             fillOpacity: 1,
             onComplete: () => {
-                console.log($(item).next().length);
                 if ($(item).next().length) {
                     moveItem($(item).next());
                 } else {

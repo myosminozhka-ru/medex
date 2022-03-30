@@ -203,9 +203,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
   function animateTyping(writer, text, selector) {
     jquery__WEBPACK_IMPORTED_MODULE_0___default()(selector).html('');
     writer.typeString(text).start();
-  } // const video = $('.animation video').get(0);
-  // console.log(video);
-
+  }
 
   var scroller = new fullpage_js__WEBPACK_IMPORTED_MODULE_1___default.a('#sections', {
     anchors: ['first', 'second', 'third', 'fourth', 'fiveth', 'sixth', 'seventh', 'eight', 'nine'],
@@ -215,7 +213,6 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
     controlArrows: true,
     afterRender: function afterRender(section, origin, destination, direction) {
       jquery__WEBPACK_IMPORTED_MODULE_0___default()('.counter__current').text(section.index + 1);
-      console.log('window.step', window.step);
 
       if (window.step == 1) {
         window.mobileStep1();
@@ -348,8 +345,6 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
           window.step1();
       }
 
-      console.log(destination.anchor);
-
       if (destination.anchor == 'first') {
         jquery__WEBPACK_IMPORTED_MODULE_0___default()('.mobile-arrows__item.mobile-arrows__item--up').fadeOut();
       } else {
@@ -367,7 +362,6 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
   });
   setTimeout(function () {
     fullpage_api.moveTo('first', 0);
-    console.log('back to the first');
   }, 2000);
 
   if (isMobile) {
@@ -402,6 +396,9 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()('[data-target_modal_id]').click(fu
 jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on('click', function (e) {
   if (jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.target).closest('[data-target_modal_id]').length || jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.target).closest('[data-modal_id] .modal__in').length) return;
   jquery__WEBPACK_IMPORTED_MODULE_0___default()(".modal").removeClass('isOpened');
+});
+jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).bind('orientationchange', function (event) {
+  location.reload(true);
 });
 
 /***/ }),
@@ -485,8 +482,6 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
       transform: "scale(1) translate(0, 0)",
       fillOpacity: 1,
       onComplete: function onComplete() {
-        console.log(jquery__WEBPACK_IMPORTED_MODULE_0___default()(item).next().length);
-
         if (jquery__WEBPACK_IMPORTED_MODULE_0___default()(item).next().length) {
           moveItem(jquery__WEBPACK_IMPORTED_MODULE_0___default()(item).next());
         } else {
