@@ -10,16 +10,14 @@
     z-index: 300;
     &__in {
         position: absolute;
-        left: calc( 50% - #{vw(250)} );
-        top: calc( 50% - #{vw(250)} );
+        left: calc( 50% - #{vw(110)} );
+        top: calc( 50% - #{vw(110)} );
         // transform: translate(-50%, -50%);
-        width: vw(500);
-        height: vw(500);
+        width: vw(220);
         @media all and (max-width: 1023px) {
-            width: 300px;
-            height: 300px;
-            left: calc(50% - 150px);
-            top: calc(50% - 150px);
+            width: 88px;
+            left: calc(50% - 44px);
+            top: calc(50% - 44px);
         }
     }
 }
