@@ -10,11 +10,6 @@ const modelurl = "./models/border.glb";
           url,
           function (gltf) {
             resolve(gltf.scene);
-          },
-          function (xhr) {
-          },
-          function (error) {
-            console.log(error);
           }
         );
       });
@@ -590,7 +585,6 @@ const modelurl = "./models/border.glb";
 
 
     window.mobileStep1 = () => {
-      console.log('step = 1 started');
       rotationPivot = true;
       clearTasks();
 
