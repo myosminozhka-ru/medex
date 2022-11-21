@@ -37,8 +37,8 @@ let rotationPivot = true;
 
 let scene = new THREE.Scene();
 
-const loader = new THREE.CubeTextureLoader();
-const texture = loader.load(['textures/NewSkyboxFace4.jpg' ]);
+const loader = new THREE.TextureLoader();
+const texture = loader.load('textures/NewSkyboxFace4.jpg');
 
 scene.background = texture;
 
@@ -150,48 +150,49 @@ loadModel(modelurl2).then((model) => {
   model.children[6].visible = false;
   modelDots = model;
 });
-// if (!isMobile) {
-//   loadModel(line6).then((model) => {
-//     model.traverse((node) => {
-//       if (node.isMesh) {
-//         node.material = material;
-//       }
-//     });
 
-//     let modelc = model.clone();
-//     modelc.scale.set(1.85, 1.85, 1.85);
+if (!isMobile) {
+  loadModel(line6).then((model) => {
+    model.traverse((node) => {
+      if (node.isMesh) {
+        node.material = material;
+      }
+    });
 
-//     let linePivot = new THREE.Object3D();
-//     linePivot.add(modelc);
-//     linePivot.rotation.z = Math.PI / 4;
-//     line1 = modelc;
-//     scene.add(linePivot);
+    let modelc = model.clone();
+    modelc.scale.set(1.85, 1.85, 1.85);
 
-//     modelc = model.clone();
-//     modelc.scale.set(1.85, 1.85, 1.85);
-//     linePivot = new THREE.Object3D();
-//     linePivot.add(modelc);
-//     linePivot.rotation.z = -Math.PI / 4;
-//     line2 = modelc;
-//     scene.add(linePivot);
+    let linePivot = new THREE.Object3D();
+    linePivot.add(modelc);
+    linePivot.rotation.z = Math.PI / 4;
+    line1 = modelc;
+    scene.add(linePivot);
 
-//     modelc = model.clone();
-//     modelc.scale.set(1.25, 1.25, 1.25);
-//     linePivot = new THREE.Object3D();
-//     linePivot.add(modelc);
-//     linePivot.rotation.z = Math.PI / 2;
-//     line3 = modelc;
-//     scene.add(linePivot);
+    modelc = model.clone();
+    modelc.scale.set(1.85, 1.85, 1.85);
+    linePivot = new THREE.Object3D();
+    linePivot.add(modelc);
+    linePivot.rotation.z = -Math.PI / 4;
+    line2 = modelc;
+    scene.add(linePivot);
 
-//     modelc = model.clone();
-//     modelc.scale.set(1.25, 1.25, 1.25);
-//     linePivot = new THREE.Object3D();
-//     linePivot.add(modelc);
-//     linePivot.position.y = 5;
-//     line4 = modelc;
-//     scene.add(linePivot);
-//   });
-// }
+    modelc = model.clone();
+    modelc.scale.set(1.25, 1.25, 1.25);
+    linePivot = new THREE.Object3D();
+    linePivot.add(modelc);
+    linePivot.rotation.z = Math.PI / 2;
+    line3 = modelc;
+    scene.add(linePivot);
+
+    modelc = model.clone();
+    modelc.scale.set(1.25, 1.25, 1.25);
+    linePivot = new THREE.Object3D();
+    linePivot.add(modelc);
+    linePivot.position.y = 5;
+    line4 = modelc;
+    scene.add(linePivot);
+  });
+}
 
 let shield1l = new THREE.Object3D();
 shield1l.position.y = fixY;
@@ -247,33 +248,33 @@ const animate = () => {
   if (shieldPivotRotationZ >= (Math.PI * 2)) {
     shieldPivotRotationZ = 0;
   }
-  // shieldPivotRotationZ += 0.01;
-  // if (line1) {
-  //   line1.rotation.y += 0.026;
-  // }
-  // if (line2) {
-  //   line2.rotation.y -= 0.016;
-  // }
-  // if (line3) {
-  //   line3.rotation.y += 0.026;
-  //   if (step == 1) {
-  //     line3.scale.set(0, 0, 0);
-  //   } else {
-  //     line3.scale.set(1.25, 1.25, 1.25);
-  //   }
-  // }
-  // if (line4) {
-  //   line4.rotation.y -= 0.016;
-  // }
-  // if (!lockShiled1) {
-  //   shield1Pivot.rotation.z = shieldPivotRotationZ;
-  // }
-  // if (!lockShiled2) {
-  //   shield2Pivot.rotation.z = shieldPivotRotationZ;
-  // }
-  // if (!lockShiled3) {
-  //   shield3Pivot.rotation.z = shieldPivotRotationZ;
-  // }
+  shieldPivotRotationZ += 0.01;
+  if (line1) {
+    line1.rotation.y += 0.026;
+  }
+  if (line2) {
+    line2.rotation.y -= 0.016;
+  }
+  if (line3) {
+    line3.rotation.y += 0.026;
+    if (step == 1) {
+      line3.scale.set(0, 0, 0);
+    } else {
+      line3.scale.set(1.25, 1.25, 1.25);
+    }
+  }
+  if (line4) {
+    line4.rotation.y -= 0.016;
+  }
+  if (!lockShiled1) {
+    shield1Pivot.rotation.z = shieldPivotRotationZ;
+  }
+  if (!lockShiled2) {
+    shield2Pivot.rotation.z = shieldPivotRotationZ;
+  }
+  if (!lockShiled3) {
+    shield3Pivot.rotation.z = shieldPivotRotationZ;
+  }
   composer.render();
   TWEEN.update();
 };
